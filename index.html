@@ -2,13 +2,95 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LLM Progress Tracker</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f8f9fa;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    header {
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #e9ecef;
+      padding-bottom: 1rem;
+    }
+    h1 {
+      color: #0066cc;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+    .subtitle {
+      color: #6c757d;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+    .reports {
+      list-style: none;
+    }
+    .report-item {
+      background-color: white;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      padding: 1.2rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .report-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .report-link {
+      display: block;
+      color: #0066cc;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+    .report-date {
+      display: block;
+      font-size: 0.9rem;
+      color: #6c757d;
+      margin-top: 0.3rem;
+    }
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      color: #6c757d;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to LLM Progress Tracker</h1>
-  <ul>
-    <li><a href="97. 25年Q1大模型季报：和广密聊当下最大非共识、AGI的主线与主峰.html"> 25年Q1 大模型季报 </a></li>
-    <li><a href="69. 口述全球大模型这半年：Perplexity突然火爆和尚未爆发的AI应用生态.html">24年Q4 大模型季报</a></li>
-  </ul>
+  <header>
+    <h1>LLM Progress Tracker</h1>
+    <p class="subtitle">Tracking the evolution of large language models and AI advancements</p>
+  </header>
+  
+  <main>
+    <ul class="reports">
+      <li class="report-item">
+        <a href="97. 25年Q1大模型季报：和广密聊当下最大非共识、AGI的主线与主峰.html" class="report-link">25年Q1 大模型季报：和广密聊当下最大非共识、AGI的主线与主峰</a>
+        <span class="report-date">2025 Q1</span>
+      </li>
+      <li class="report-item">
+        <a href="69. 口述全球大模型这半年：Perplexity突然火爆和尚未爆发的AI应用生态.html" class="report-link">口述全球大模型这半年：Perplexity突然火爆和尚未爆发的AI应用生态</a>
+        <span class="report-date">2024 Q4</span>
+      </li>
+    </ul>
+  </main>
+
+  <footer>
+    <p>© 2024 LLM Progress Tracker</p>
+  </footer>
 </body>
 </html>
