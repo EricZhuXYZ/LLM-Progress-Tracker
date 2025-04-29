@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google DeepMind 播客报告：AI、意识与推理</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+        .report-container {
+            max-width: 850px;
+            margin: 30px auto;
+            background-color: #ffffff;
+            padding: 35px 45px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e0e0e0;
+        }
+        h1 {
+            color: #1a73e8; /* Google Blue */
+            text-align: center;
+            margin-bottom: 15px;
+            font-weight: 500;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 15px;
+        }
+        h2 {
+            color: #4285f4; /* Lighter Google Blue */
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: 500;
+            border-bottom: 1px solid #f0f0f0;
+            padding-bottom: 8px;
+        }
+        .participants {
+            margin-bottom: 25px;
+            padding-left: 20px;
+            border-left: 4px solid #1a73e8;
+            background-color: #e8f0fe;
+            padding: 15px 20px;
+            border-radius: 5px;
+        }
+        .participants strong {
+            color: #0d47a1; /* Darker Google Blue */
+        }
+        .dialogue {
+            margin-top: 20px;
+        }
+        .dialogue p {
+            margin-bottom: 18px;
+            padding: 10px 15px;
+            border-radius: 6px;
+            background-color: #f1f3f4; /* Light grey background for each turn */
+        }
+        .dialogue .speaker {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .speaker-murray {
+            color: #00796b; /* Teal */
+        }
+        .speaker-hannah {
+            color: #d81b60; /* Pink/Magenta */
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: #dcdcdc;
+            margin: 30px 0;
+        }
+         @media (max-width: 600px) {
+            .report-container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+            body {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="report-container">
+    <h1>Google DeepMind 播客：AI、意识与推理</h1>
+
+    <div class="participants">
+        <p><strong>主持人:</strong> Hannah Fry 教授</p>
+        <p><strong>嘉宾:</strong> Murray Shanahan 教授 (伦敦帝国理工学院认知机器人学教授，Google DeepMind 首席研究科学家)</p>
+    </div>
+
+    <hr>
+
+    <h2>对话内容</h2>
+
+    <div class="dialogue">
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 我认为存在着大量极其有趣的哲学问题，这些问题是由人工智能引发的。比如，人类心智的本质是什么？心智本身的本质又是什么？</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 那意识呢？</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 我确实认为这是一个错误的问题，而且我认为它在很多方面都是错误的。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 您认为人工智能在推理方面做得有多好？</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 嗯，这是一个非常有趣且有点悬而未决的问题，而且有些争议。你知道，想到今天出生的每一个孩子，他们将在一个从未知道机器无法与他们交谈的世界中长大，这真是令人震惊。真是令人难以置信。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 欢迎回到 Google DeepMind 播客。本期节目的嘉宾是 Murray Shanahan，伦敦帝国理工学院认知机器人学教授，同时也是 Google DeepMind 的首席研究科学家。我们都听说过有人爱上聊天机器人，有人试图让大型语言模型思考自身的存在，或者质疑它们对现实的概念理解极限的故事。但关于自我认同、思考和元认知的这类问题，已经困扰了哲学家数千年。因此，他们转向人工智能来探究关于人工智能本身智能的本质、其当前能力，甚至其意识等最深刻的问题，这似乎合情合理。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> Murray Shanahan 自 1990 年代以来就一直在人工智能领域工作。如果你关注这个播客有一段时间了，你会记得他是 2014 年科幻电影《机械姬》（Ex Machina）的顾问，这部电影讲述了一位计算机程序员有机会测试一个女性机器人 Ava 的智能，并最终质疑她是否具有意识。Murray，欢迎再次来到播客。</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 很高兴。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 回想一下，我知道您在《机械姬》这部 Alex Garland 的电影中扮演了关键角色。您认为在那部电影中，以及当时其他的科幻电影中，哪些方面预测对了？回想 10 到 15 年前，我们当时的方向对吗？</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 是的。《机械姬》确实做出了巨大贡献的一方面是，它提出了大量关于意识、关于人工智能与意识，以及因此关于意识本身的非常有趣且引人深思的问题。所以这是一个巨大的成功。但有趣的是，就在《机械姬》上映前不久，《她》（Her）上映了。Spike Jonze 的电影《她》。当时，我其实并不太喜欢《她》这部电影，因为我觉得一个人爱上这种没有实体的声音太不可思议了，即使那是 Scarlett Johansson 的声音。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> （笑）是的。</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 我当时错得有多离谱啊。作为一个预测，我认为《她》在预测我们现在的世界方面做得非常出色。现在，我们不太清楚未来几年事情会如何发展，因为也许机器人技术也会像人工智能中的语言技术那样快速发展。但目前来看，一切都关乎没有实体的语言。而且，《她》也展示了人们实际上确实能够与没有实体的人工智能系统建立关系，无论是以何种最广泛的意义来说，这都是一件非凡的事情。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 好的。我们谈论的是 10、15 年前，但您参与人工智能领域的时间要早得多。您认识 John McCarthy？</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 我确实认识 John McCarthy。我非常了解他。John McCarthy 曾是计算机科学和人工智能领域的教授。他实际上创造了“人工智能”这个术语，并且是 1956 年著名的达特茅斯会议提案的作者之一，那是世界上第一次人工智能会议。那次会议真正地规划了整个领域。当时人们根本没有认真思考过这类事情，只有少数几个人。所以，我认为他是一个真正的激进思想家，而且一直都是。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 好的，那“人工智能”这个词的选择，在 1955 年，是个好的选择吗？</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 是的，我仍然认为是。我知道有些人不这么认为，他们觉得这可能不是一个好的词语选择，但我仍然……</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 给我们讲讲他们的一些论点。</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 首先，是“智能”这个词。你知道，“智能”本身在某种程度上是一个非常有争议的概念。尤其是当人们想到智商测试之类的事情时。以及认为智能是一种可以在简单直接的量表上量化的东西，然后有些人比其他人更聪明的想法。我认为，在心理学中，今天人们普遍认识到存在多种不同类型的智能。这是一个非常重要的点，对吧？所以，存在对那个词的担忧。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 那您会用什么不同的词呢？</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 嗯，也许是“人工认知”之类的。我经常，我经常用“认知”这个词来指代思考、处理信息等等。但是，说实话，它没有那种韵味，对吧？</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 没有。尤其现在不行了。我觉得我们在这条路上走得太远了，不是吗？</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 是的。“人工”这个词，我倒不觉得有什么问题。这似乎是合适的词。它暗示了这是我们建造的东西，而不是在自然界中进化而来的。所以这似乎是正确的词。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 对那个词的反对意见，我猜是，最终构建人工智能的一切，在某种程度上都是由人类构建的。</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 当然。是的。但它确实是。那这个词有什么问题呢，在这种情况下？我的意思是，我认为那是，那是真的。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 您是研究符号人工智能的，对吗？给我们讲讲它与其他类型的区别，以及我们现在在对比中处于什么位置。</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 是的，当然。是的。是的。所谓的符号人工智能范式，在很长一段时间内，在几十年里，都非常突出，占据主导地位。那里的想法是，一切都关乎符号的操作，以及类似语言的句子、符号，并使用推理过程处理这些符号。典型的例子是专家系统。所以在 1980 年代，人们在构建这些专家系统。当时的想法是，你会尝试将医学知识，比如说，编码成一组规则。规则可能是这样的：“如果病人发烧 104 度，皮肤呈紫色，那么有 0.75 的概率患有‘皮肤炎’（skinitis）”之类的。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> （笑）</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 你可以看出来我不是医生。然后，你会把成千上万条这样的规则放入一个巨大的知识库。然后你会有一个所谓的推理引擎，它会对所有这些规则进行逻辑推理，从而得出关于可能疾病的结论，在那个例子中。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 但那主要是大量的“如果…那么…”规则。</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 是的，主要是“如果…那么…”类型的规则。其中一个大问题是，这些规则从哪里来？嗯，得有人把它们都写出来。而且，因此出现了一个完整的知识获取领域，你需要去拜访专家，试图从他们那里提取他们对其领域的理解，这可能是医学诊断，也可能是修理复印机，或者是法律，然后你试图把所有这些编码成计算机可理解的、非常精确的规则。那是一个非常繁琐的过程，而且最终得到的东西非常、非常脆弱。它会在各种情况下出错。</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 另一个重要的研究领域是常识，因为人们常常意识到，我们隐含地拥有大量关于日常世界的常识知识，涉及到日常物体、它们的固体性质、它们的运动方式、它们如何相互组合等等，你知道，液体、气体、重力以及各种类似的事情。我们实际上一直在运用所有这些知识，但这是无意识的。所以后来有一个大项目，或者说各种大项目，试图将所有这些常识知识编码化。然后试图将这些转换成像公理、逻辑和规则之类的东西，简直是一场噩梦。所以我最终，我认为大概在 2000 年代初，我真的觉得这个研究范式注定要失败。老实说。然后我有点，你知道，开始远离它了。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 但后来，当然，像神经网络之类的东西出现了，等等。这更多地不是关于“如果…那么…”规则，而是更多地关于从大量数据中提取信息。</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 是的。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 但我现在有点好奇，既然语言问题实际上已经被攻克了，我们是否在某种程度上达到了一个更高的抽象层次，可以回到一些更符号化的技术，一些更符号化的想法？</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 嗯，我们当然可以。因为现在，大型语言模型的一个热门话题就是推理。所以有这些所谓的“思维链”（chain of thought）模型，它们实际上执行一整套……你知道，它们不仅仅是生成问题的答案，而是在给出答案之前生成一整套推理链。这可能非常有效。所以有趣的是，这在很多方面都呼应了，你知道，人们在符号人工智能时代所关注的那种东西。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 但实现这一切的基础基质却非常、非常不同，因为它不是硬编码的规则。正如你提到的，它是神经网络，是已经学习了……</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 让我接着刚才关于推理的观点问一下。作为一个哲学家，有逻辑学背景，您认为人工智能在推理方面做得有多好？</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 嗯，这是一个非常有趣且有点悬而未决的问题，而且有些争议。计算机科学家和人工智能人士，他们对推理有一个特定的概念，一个特定的推理概念，这在很大程度上可以追溯到形式逻辑和定理证明。所以在符号人工智能时代，例如，确实有一些系统非常擅长用形式逻辑进行定理证明。所以人们认为那是“真正的”推理，那是真正的硬核推理。而如今的大型语言模型，它们无法匹敌那种已经存在了几十年的手工编码的定理证明器或逻辑引擎的性能。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 能举个例子吗？什么样的定理可以被硬编码系统证明？</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 比如，你可能有大约 20 或 30 条逻辑公理。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 比如像“1后面跟的数是2”这样的？</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 嗯，可能是类似这样的。可能是在数论领域或者一些非常数学化的东西。但也可能是更日常的东西。例如，假设你有一个非常困难的物流规划问题，你可能有几百辆卡车、仓库、货物以及各种各样的东西。你需要规划路线和卡车的部署，它们要去哪里。这在计算上是一个非常困难的问题，并且可以用非常精确的形式规则来表达。这就是你可能想使用一个老式的、直接的算法，一种已经存在很长时间的规划算法的情况。</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 现在，当代的大型语言模型在这方面越来越好，但它们仍然，你知道，你没有那种数学上的保证，它们总能得出完全正确的答案。而且很容易制造出例子，当你增加越来越多的公理等等，它们就会出错。有一个完全独立的研究方向，就是尝试构建更多手工编码的东西，将当今的人工智能技术与更老式的符号技术相结合，专门用于数学定理证明，DeepMind 在这方面做了一些惊人的工作。但这与大型语言模型不同。对于大型语言模型，我们想到的是这些可以谈论任何事情的聊天机器人。它们碰巧能做的一件事就是一种推理。这种推理，目前还不如你手工构建专门系统做得那么好。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 不过这有点意思，因为手工构建的东西，最终得到的是非常僵化的东西。</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 这就是问题所在。是的。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 而且很脆弱。</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 是的，绝对是的。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 但同时，从生成式人工智能方法中获得的灵活性，你知道，它太松散了。你需要那种刚性在里面。</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 嗯，你知道，也许是，也许不是。我认为人类事务的很多例子都不是那么黑白分明的。你知道，你确实可能希望事情更模糊一些。即使在一些简单的日常事情中，比如，你知道，花园的这个角落放什么花比较好？嗯，你知道，我们那个角落已经有一些玫瑰了，那些玫瑰是黄色的，所以我们不能有太多黄色，所以我们可能需要把它们移到花园的另一个角落。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 但与此同时，这，这是真正的推理吗？还是说这只是人工智能在模仿训练数据中存在的结构良好的论证，只是在一个新颖的环境中？</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 是啊，当然，这就引出了一个问题：什么是真正的推理？你知道，我认为没有……这并不是写在天上的，你知道，什么是真正的推理。这取决于我们来定义推理的概念，或者说推理。所以，所以我们有那个……你知道，我们之前谈到过那种数学推理，逻辑学家做的那种，以及过去和现在的定理证明器所做的那种。但是，你知道，那……当人们最初使用像“推理”这样的术语时，他们并没有想到那种东西。当我们在日常生活中使用“推理”这个词时，我们也不是在想那种东西。所以，如果你和一个大型语言模型聊天，谈论你的花园，然后你说：“我在想种什么植物”，然后它说：“嗯，也许你应该考虑在这个位置种这种植物，因为这对土壤最好，而且考虑到你说那里风大……”你知道，我们就会说那是在提供理由。我的意思是，它是在提供理由。现在它们从哪里来是另一回事。所以人们可能会说：“这只是在模仿训练集里的东西”，但是，你知道，它可能从来没有见过完全一样的例子，那种场景完全一样。所以它在某种程度上超出了训练集。我认为这只是在以日常的方式使用日常的推理概念，来称之为推理。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 我只是在回想一些早期哲学家希望人工智能拥有的不同特征。推理是其中之一。但还有，还有图灵测试，当然，这个测试总是被提及，作为一种测试人工智能能力的方法。我的意思是，它有点争议，对吧，我猜，就它作为测试人工智能能力的有效性而言。您对此有何看法？您认为它曾经是一个好的测试吗？</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 不。我认为……我一直认为这是一个糟糕的测试，但它确实是一个极好的……引发关于这些事情的哲学讨论的契机。事后看来，也许我可能会在一些观点上有所退让，因为我……我当然非常、非常倾向于认为，具身性（embodiment）是智能的一个关键方面，对于实现，你知道，智能至关重要。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 这跟图灵测试完全沾不上边，对吧？</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 不，图灵测试是……是绝对明确地与具身性无关。因为你……因为在图灵测试中，提醒一下大家这是什么。你在图灵测试中有两个测试对象，一个是人类，另一个是计算机。然后你有一个裁判。人类裁判看不到哪个是计算机，哪个是人类。他们只能通过类似聊天的界面与这些测试对象交谈。他们看不到它们是否是具身的。所以它们……我们可以，你知道，很容易假设那个计算机可能是当今的大型语言模型之一。在这种情况下，你知道，我不得不说，今天它们几乎肯定会通过图灵测试。你知道，我的意思是，我们已经达到了那个地步，这真是了不起。但是，所以，我过去认为这是一个糟糕的测试，因为它没有测试任何这些具身的技能。所以，所以你需要一个机器人，真的，来测试某物是否具备那种我们都在使用的日常认知能力，例如，在泡茶的时候。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 因为否则那是一种非常、非常狭隘的智能形式。</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 是的，这完全是关于语言和推理，而与进化在我们以及其他动物身上发展出来的那些东西无关，在语言出现之前，对吧？也就是操纵、四处移动、导航以及探索，你知道，以最好的意义来说，日常的物理世界的能力。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 所以实际上，这真的很有趣。这太有趣了。因为我经常想到，好吧，也许我们目前拥有的大型语言模型可以通过图灵测试，但是如果你向你的电脑扔一个球，它们不会退缩。</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 不，确实不会。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 而且在某种意义上，存在着这些，正如你所说，这些更深层次的形式，也许我们不会将其归类为智能，在我们谈论它的方式中。但最终它们，它确实是一种智能形式。</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 嗯，我认为它在很大程度上是一种智能形式。而且，我认为在生物学案例中，现在我必须对所有这些事情加上限定：在生物学案例中，你知道，我们思考、推理和交谈的能力在很大程度上是基于我们与日常世界的互动。如果你思考几乎所有你的日常言语，都在使用空间隐喻。我的意思是，它们完全渗透了我们的日常言语。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 即使是“渗透”（permeate）这个词。</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 是的，绝对是。或者“基于”（grounded），我刚才用了这个词，你知道。所以……所以我们只是……我们一直都在使用那些东西。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 因为我们从根本上是物理存在。</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 因为我们从根本上是物理存在，因为我们的大脑进化是为了帮助我们生存和繁衍，你知道，在这个物理世界中。是的。并且是在与其他也在做同样事情的存在互动时。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 因为当你试图测试人工智能的能力时，确实存在一些替代方案。嗯。给我们讲讲一些我们可能有的潜在替代方案。</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 嗯，我想也许你想到的是加兰测试（Garland test）。我称之为加兰测试。这……嗯，这可以追溯到电影《机械姬》，当然是由 Alex Garland 执导的。剧本里有一段，Nathan，那个亿万富翁，正在和 Caleb 谈话。Caleb，你知道，就是那个被请来和机器人 Ava 互动的人。Caleb 说：“哦，我来这里是为了对 Ava 进行图灵测试。” Nathan 说：“哦不，我们早就过了那个阶段了。Ava 可以轻松通过图灵测试。关键在于，让你看到她是个机器人，然后看你是否仍然认为她有意识。”</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 哇。</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 这就是我所说的加兰测试，它在两个方面不同于图灵测试。所以，首先，那个所谓的裁判，在那个案例中是……是 Caleb，可以看到她是个机器人。所以在图灵测试中，裁判看不到哪个是哪个。但在这里，想法是……是，你知道，Caleb 看到……知道她是个机器人。知道她……知道她的大脑是一个人工智能大脑。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 但仍然……</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 但仍然将这些特征归因于她。是的，而且所讨论的特征也不同，因为它不是智能，不是“她能思考吗”，而是“她有意识吗？”或者“它有意识吗？”这是一个完全不同的测试。我认为，你知道，智能和意识是不同的东西，我们可以将这两者区分开来，将它们分离开来。</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 嗯，所以当我第一次读到电影剧本时，那几句特别的台词就在那里，是 Caleb 和 Nathan 的对话。然后我在我的版本旁边写了“完全正确！”加了个感叹号，因为我当时就觉得 Alex 完全抓住了一个非常重要的想法。所以在我的写作中，我称之为加兰测试。而且已经有不少人接受了这个说法，也称之为加兰测试。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 是否有一个测试，如果人工智能能够通过，会真正让您印象深刻？</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 我一直对 Francois Chollet 的 ARC 测试印象深刻。ARC 代表抽象推理语料库（Abstract Reasoning Corpus）。这些是一些小的图像序列，有点像你在智商测试中看到的那种。这些图像是成对排列的。所以你有第一个图像，它是那种像素化的图像，上面有小单元格和一些你可以解释为物体或线条之类的东西。然后你感兴趣的是……挑战在于找出一个规则，能把你从第一个图像带到第二个图像。然后你必须把这个规则应用到第三个图像上。首先，他保留了……并且完全保密了所有测试用的图像。所以你无法通过知道实际的测试版本来“作弊”。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 或者在训练集里用它。</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 或者在训练集里用它。这就是……这差不多就是我的意思。而且他还非常仔细地设计了它们，使得每次的规则都非常不同。每个规则，你知道，都和其它规则完全不同。而且你通常需要找到某种直观的应用，往往是我们日常常识知识的应用。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 看到这个就像看到液体朝这个方向流动，或者想象这个东西在移动或生长之类的。</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 所以它需要某种程度的“扎根”（grounding）。嗯，看起来是这样，但是，但是最近，你知道，人们已经能够在使用更……更“暴力”（brute force）的方式在这些问题上取得显著进展。所以……所以我感觉这些解决方案并……并不是真的……你知道……嗯……抓住了原始测试的精神。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 嗯，这有点像，某种程度上，一旦你，一旦你设定了一个衡量标准，一旦你设定了一个门槛，说一旦我们越过这个门槛，那么我们就会拥有能力、智能、意识，或者别的什么。它，它本身就改变了测试的性质。</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 是的，人们会开始，你知道，针对测试进行优化，对吧？这就是古德哈特定律（Goodhart's law），对吧？所以……</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 绝对是的。很多来参加这个播客的人都表达了对这些事物进行拟人化需要真正谨慎的需求。您是那些认为我们不应该这样做的人之一吗？</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 嗯，我认为看待这个问题有不同的方式，我认为有好有坏的拟人化形式。所以，一方面，人们会开始与人工智能系统建立他们所认为的关系——友谊、陪伴和指导关系。而且，你知道，如果他们被误导，认为这些东西拥有它们实际上并不具备的能力，那这可能是一件坏事。所以我认为这才是问题所在。</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 比如说，《大英百科全书》，对吧？那本，那本实体书卷，《大英百科全书》并不知道阿根廷赢得了世界杯，因为这……它太老了。所以如果，如果你说了那句话，别人完全能理解，你知道，如果你那样说，没问题。但如果有人对你说：“为什么不和它聊聊英格兰足球的实力呢？”你知道，或者说缺乏实力。你知道，那会很荒谬，对吧？</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 有趣的是，现在我们有了这些大型语言模型，你可以和它们谈论……你可以告诉它们事情，你可以……所以，它有点像在推动我们可能开始说“嗯，它并不是真的 XYZ”的那个界限。它把那个界限推得更远了一点。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 我想知道这里面是不是有更深层次的东西，关于这种人类的需求，或者也许只是一种愿望，就是真的想要人工智能拥有这些特征，被拟人化。</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 是的，是的。嗯，那真是一个非常有趣的问题，不是吗？所以我不认为这可以归结于此。它确实与语言有关，你知道，在这个例子中。我们倾向于将事物拟人化，因为它们非常擅长使用语言。而对我们来说，唯一擅长使用语言的是其他人类。所以，突然发现自己身处一个有会使用语言的东西的世界，这在某种程度上非常奇怪，你知道，不仅仅是人类会说话。这太令人惊讶了。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 是的。我意思是，这太令人惊讶了。</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 这太令人惊讶了。所以，你知道，想到今天出生的每一个孩子，他们将在一个从未知道，从未经历过机器无法与他们交谈的世界中长大，这真是令人难以置信。这真的是。那么这对我们所有人意味着什么，真的很难说。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 我只是在回想你刚才说的，关于人类是如何扎根于物理世界的。</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 是的。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 确实感觉人工智能的具身方面（embodied aspect）已经落后于这个语言方面（language aspect）相当多了。</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 是的。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 你认为一旦我们拥有了良好且有效的具身人工智能，我们会在智能（无论你怎么定义）或者更广泛的能力方面看到一个巨大的飞跃吗？</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 嗯，我认为这可能会带来很大的不同。因为我们目前拥有的大型语言模型，老实说，现在真的很难辨别它们的极限在哪里，它们能变得多好。我们是否真的走在制造出与人类通用智能相当的通用智能的道路上。而且，而且通常，你知道，当你接触到这些东西能力的边界时，你有时会得到这样的印象：人工智能系统并没有真正“领会”（grok），你知道，某些事情。它并没有真正深入地理解某些事情。你达到某种极限，然后意识到它有点像在“装懂”（faking it）。</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 但也许，那种真正能够在深层次上理解事物的通用能力，在深刻的，你知道，常识层面上，也许，那确实仍然需要一点具身性。它确实仍然……基本上需要包含与真实物理世界、物理对象及其空间组织的互动训练数据。这其中有某种根本性的东西。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 好的，如果理解（understanding），那么，无论我们如何定义它，是某种可以仅仅作为拥有越来越多数据的后果而涌现（emerge）出来的东西。那意识（consciousness）呢？我的意思是，我肯定你已经被问过无数次关于人工智能意识的问题，以及我们是否可以期待它的发生，或者它是否已经发生了？</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 是的，是的。嗯，首先要指出的是，我确实认为我们可以区分开，你知道，智能（intelligence）或认知（cognition）和认知能力（cognitive capabilities），我们可以将其与意识（consciousness）区分开来。所以我认为我们可以想象一些非常能干的东西，并且拥有……你知道，我们想说它们非常智能，因为它们实现目标的方式等等。但是我们不想赋予它们意识。</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 但实际上，这到底意味着什么？将意识归于某个事物？我认为意识这个概念本身，嗯，你知道，它可以被分解成许多部分。它是一个……它是一个多方面的概念。例如，我们可以谈论对世界的意识（awareness of the world）。在意识的科学研究中，有所有这些实验方案和范式，其中许多都与知觉（perception）有关，你知道，你在研究一个人是否意识到某事，是否有意识地感知到世界中的某物。大型语言模型在这方面根本不具备对世界的意识。但意识还有其他方面。我们也有自我意识（self-awareness）。我们的自我意识，一部分是对我们自己身体的意识，以及它在空间中的位置。但自我意识的另一个方面是对我们自己，你知道，内在运作的一种意识，对我们意识流（stream of consciousness）的意识，正如威廉·詹姆斯（William James）所说。所以我们也有那种自我意识。我们还有，有些人称之为元认知（metacognition）。我们有思考我们知道什么的能力。然后此外，还有意识的情感（emotional）方面或感觉（feeling）方面，或感知能力（sentience）。所以感受的能力，遭受痛苦的能力。嗯，那是意识的另一个方面。</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 现在，我认为我们可以将所有这些区分开来。在人类身上，它们都作为一个大包裹，一个大捆绑出现。我们只需要想想非人类动物就能意识到，我们可以开始将这些东西，嗯，这些东西稍微分开一点，因为我认为，尽管我非常喜欢猫，我认为猫身上的自我意识是有限的。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> （笑）你怎么敢这么说？</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 嗯，我，你知道，我是一个非常喜欢猫的人，我必须说。所以我说这话时有些犹豫。而且，你知道，它们……</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 元认知能力很弱，我们可以这么说吗？</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 嗯，是的，当然它们没有对自己持续进行的言语意识流的意识，因为它们没有。所以它们，所以它们不会用言语思考昨天做了什么，或者它们想用自己的生命做什么。所以如果我们思考像机器人，你可能有一个非常复杂的机器人，你知道，即使是你的扫地机器人，你可能会说它，“嗯，你知道，它确实有某种对世界的意识。”</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 这样用“对世界的意识”这个短语并无不妥。我想称它为有意识吗？嗯，那我就似乎把所有其他东西也带进来了。但你不必这样做。你可以把意识的概念分解成这些不同的方面。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 因为你的扫地机器人可以确切地知道它在一个空间里的位置，以及如何……</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 是的，并且以一种智能和敏感的方式对其位置和周围物体做出反应，并实现其目标。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 所以那里有某种对世界的意识。没有自我意识，当然也没有遭受痛苦的能力。因此，在一个大型语言模型中，那可能不是那种知觉意义上的对世界的意识，但也许有某种类似……你知道……某种自我意识或反思能力，反思性认知能力，它们可以谈论它们在对话中早些时候谈论过的事情，例如，并且能以一种……你知道……一种反思的方式来做，这有点像我们拥有的自我意识的某些方面，有点像。我不认为把它们想象成有感觉是合适的。它们无法体验痛苦，因为它们没有身体。</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 我认为我们可以把这个概念拆开来看，基本上。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 那么，问题是，人工智能能否有意识？是不是一个非此即彼的问题？从一开始这就是个错误的问题。</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 我确实认为那是个错误的问题。而且我认为它在很多方面都是错误的。所以，正如我们刚才谈到的，它实际上是一个多方面的概念。但我也认为，我们倾向于对意识持有这些非常深刻的形而上学的承诺，认为它是某种……你知道……某种神奇的东西，是……你知道……一种形而上学的东西。所以，某物是否有意识的问题，不是一个……你知道……共识的问题，也不是仅仅是语言的问题，而是某种存在于形而上学现实中，或者存在于上帝心中，或者存在于柏拉图式的天堂之类的东西。但是，最终，我确实认为那是思考意识的错误方式。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 让我们来看意识的一个方面，就是你描述的那个，关于情感方面，遭受痛苦的能力——但不一定是身体上的痛苦，也包括情感上的痛苦——以及某种情感上的自我感。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 你认为这只是智能发展到一定程度自然产生的结果吗？如果你构建的东西足够智能，到某个时候，这就会发生？还是说，生物体有一些独特之处，也许是我们经历的进化过程，导致了这一点，而这是机器无法复制的？</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 我认为你的问题没有一个绝对正确或错误的答案。你知道，我认为我们只需要拭目以待，看看我们创造出什么样的东西，以及我们最终如何对待它们、谈论它们和思考它们。</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 我不认为我们真的知道，直到它们，你知道，就在我们中间，就像我们正在建造的这些东西。然后……然后我们自然会被引导去以某种方式思考它们、谈论它们并对待它们。所以，在这方面我喜欢想的一个例子是章鱼。所以，章鱼最近被纳入了，你知道，英国的立法，被归入了我们必须关心其福祉的那类事物。</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 我认为这是很多事情发生的结果。所以公众已经接触到，你知道，更多地与章鱼相处。现在，你不必真的潜入水中和章鱼打交道才能知道和它们在一起是什么感觉，因为有各种精彩的纪录片和精彩的书籍，比如 Peter Godfrey-Smith 写了这些关于与章鱼互动的很棒的书籍等等。所以……所以那些叙述和纪录片，它们让我们感受到和章鱼在一起是什么样子，和章鱼相遇是什么感觉。然后，你知道，你有点情不自禁地把它看作是一个有意识的同伴生物，你知道。</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 但与此同时，科学研究也在进步。所以在同一时间，科学家研究章鱼的神经系统，并且，你知道，意识到它们的神经系统在多大程度上与我们的相似，以及我们体验痛苦的方式，你可以在它们的神经系统中找到类似的，你知道，与我们相似的方面。把所有这些放在一起，我认为这往往会影响我们思考它们的方式、谈论它们的方式以及我们对待它们的方式。所以我认为同样的事情也会，你知道，将发生在人工智能系统上。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 我认为……我是否存在一个绝对正确或错误的答案关于……你知道……我们是否可能被误导？我认为这是一个非常、非常深刻和困难的形而上学、哲学问题。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 我确实想知道，不过，那个关于痛苦（suffering）的观点，对我来说似乎与其他观点不同。因为……因为元认知（metacognition），你知道，对世界的感知等等，这些不一定带有伦理含义。但我认为对于痛苦，比如……你不会希望你的鞋子是有意识的，对吧？</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 不，不会。你不会希望一个叉车是有意识的。除非它们碰巧真的喜欢当一个叉车，你知道？</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 当然，当然。但是那么我们是否需要对那个特定的方面更加小心一点呢？</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 我认为我们应该。如果存在创造出真正能够遭受痛苦的东西的可能性，那么我们应该非常认真地思考我们是否应该这样做。你知道，我倾向于认为我们目前拥有的任何东西都不是这种情况。但是，你知道，有些人会反对这种看法。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 以大型语言模型为例。嗯，好吧，所以在某种层面上，它们所做的是下一个词元预测（next token prediction），下一个词预测（next word prediction）。但是为了能够做到这一点，你知道，做得非常好，就像它们目前能够做到的那样，那么它们必须学习，你知道，并且获得各种涌现机制（emergent mechanisms）。所以谁知道呢，在这些庞大、巨大、数量惊人的——数千亿个权重的语言模型中，是否没有学到某种涌现机制，而这种机制，你知道，具有，例如，真正的理解力（understanding），无论那意味着什么，甚至意识（consciousness）。</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 回到具身性（embodiment），我一直持有的观点是，只有在我们能够与之共享一个世界，并且能够进行那种我们与章鱼、狗或马等进行的接触时，谈论意识才真正合理。和那个动物一起在世界上，一起对事物做出反应，那么我毫不怀疑它们是有意识的。这对我来说是一个基本案例。现在，对于大型语言模型，你无法以那种方式和它们在同一个世界里。你无法和它们一起玩耍，也无法与物理对象互动，至少对于今天的大型语言模型来说是这样，对吧？所以，在我看来，在这种背景下使用意识的语言，就像维特根斯坦（Wittgenstein）会说的，是让语言“放假”（taking language on holiday）。这是在远远超出其正常使用范围的情况下使用它。你知道，也许这不合适。但这可能会改变，你知道？而且我……而且我越是与大型语言模型互动，越是与它们进行这些复杂而有趣的对话，我就越倾向于思考，嗯，也许我想扩展意识的语言，弯曲它，改变它，扭曲它，创造一些新词，把它分解开来，用适合这些我一直在互动的新事物的方式来描述。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 我知道你花了很多时间与这些大型语言模型互动。我甚至看到你被称为“著名的提示语低语者”（renowned prompt whisperer）。你的秘诀是什么？</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 嗯，一个秘诀是，像和人说话一样和大型语言模型说话。所以如果你认为它们所做的是扮演一个人类角色，比如，比如说，一个非常聪明、乐于助人的实习生，那么你就应该像对待一个聪明、乐于助人的实习生那样对待它们。和它们说话时，就好像它们是聪明、乐于助人的实习生。例如，只是保持礼貌，说“清楚了吗？”以及“请”和“谢谢”。以我的经验来看，如果你这样做，你会从它们那里得到更好的回应。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 你会说“请”和“谢谢”吗？</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 你可以说“请”和“谢谢”。是的。现在，有一个很好的理由，很好的科学理由，为什么那样做可能会得到……取决于……你知道，同样，这只是取决于……而且模型一直在变化，为什么那样做可能会得到更好的性能，因为如果它在角色扮演，比如说，它在扮演一个超级……一个非常聪明的实习生，对吧？嗯，那么它们可能……那么它可能就会角色扮演得有点……有点不高兴，如果它们没有被礼貌地对待。这……你知道，这只是在模仿人类在那种情况下会做什么。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> （笑）这太可爱了。我非常喜欢这个。我想回到我们开始的地方，那就是关于我们如何思考人工智能，我们用来描述它的语言，以及我们如何在脑海中构建它的框架。你认为我们需要一种新的方式来谈论人工智能吗？</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 我认为是。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 既能承认它的潜力，又不过高估计它，但同时又不会轻视它能做的事情。</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 我认为这正是我们所需要的。在我的一篇论文中，我使用了“奇异的类心智实体”（exotic mind-like entities）这个短语来描述大型语言模型。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 可爱。再说一遍。</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 奇异的类心智实体。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 可爱。</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 所以它们在某种程度上是类心智的（mind-like），而且它们越来越像心智。现在，使用那个小小的连字符“like”有一个非常重要的原因，那就是因为我……我……我想对它们是否真的符合心智的标准持保留态度。所以我可以通过使用“mind-like”来回避那个问题。它们是奇异的（exotic），因为它们在语言使用方面不像我们，但在其他方面，它们首先是没有实体的。关于它们，可能存在一些非常奇怪的自我概念。但是……所以它们也是相当奇异的实体。所以我认为它们是奇异的类心智实体。而我们只是……我们还没有合适的概念框架和词汇来谈论这些奇异的类心智实体。你知道，我们……我们正在努力，而且……而且它们在我们身边越多，我们就越会发展出新的谈论和思考它们的方式。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 不过有趣的是，你仍然倾向于那种类似图灵测试的方法，像是对待一个“生物”（creature）一样，而不是那种“工具”（tool）的想法。</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 嗯，我的意思是，你知道，“实体”（entity）是一个相当中性的词，不是吗？我想你也可以只说“东西”（thing）。奇异的类心智的东西，如果你更喜欢的话。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 是的，我们就用这个吧。我觉得，让我们……让我们推动用这个来命名吧。</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> 好。好。但是我恐怕不行，Hannah，因为我在很多出版物中都用过“实体”这个词了。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> （笑）奇异的类心智实体。我喜欢这个。我非常喜欢。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> Murray，非常感谢你加入我们。</p>
+
+        <p><span class="speaker speaker-murray">Murray Shanahan:</span> Hannah，这是我的荣幸。谢谢你。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 做这个播客这么多年，一件很棒的事情是，你真的能看到那些处于人工智能前沿的人，他们的观点是如何随着时间的推移而改变和变化的。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 过去几年在很多方面都真正改变了游戏规则——关于智能在多大程度上需要物理身体，关于我们需要在多大程度上扩展我们对意识的定义，以适应这些“类心智实体”运作的微妙不同方式。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 而未来几年，嗯，谁知道呢？但如果过去的预测有任何指示意义，我们唯一知道的关于未来的科学和技术就是，它将与我们今天想象的截然不同。</p>
+
+        <p><span class="speaker speaker-hannah">Hannah Fry:</span> 您一直在收听的是 Google DeepMind 播客，我是主持人 Hannah Fry 教授。如果您喜欢这一集，请订阅我们的 YouTube 频道。您也可以在您喜欢的播客平台上找到我们。当然，我们还有更多关于各种主题的节目即将推出。所以请务必关注。下次再见。</p>
+
+    </div>
+
+</div>
+
+</body>
+</html>

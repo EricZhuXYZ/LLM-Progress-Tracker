@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>语音访谈报告</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            line-height: 1.7;
+            margin: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .report-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 25px 40px;
+            border-radius: 8px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #0056b3;
+            margin-bottom: 35px;
+            border-bottom: 2px solid #dee2e6;
+            padding-bottom: 15px;
+            font-weight: 600;
+        }
+        .speech-block {
+            margin-bottom: 25px;
+            padding: 15px 20px;
+            border-radius: 6px;
+            border-left: 5px solid;
+        }
+        /* Style for Speaker 1 */
+        .speech-block.speaker-1 {
+            border-left-color: #0d6efd; /* Bootstrap primary blue */
+            background-color: #e7f3ff;
+        }
+        /* Style for Speaker 2 */
+        .speech-block.speaker-2 {
+            border-left-color: #198754; /* Bootstrap success green */
+            background-color: #e9f5ec;
+        }
+         /* Style for Music */
+        .speech-block.speaker-音乐 {
+             border-left-color: #6c757d; /* Bootstrap secondary gray */
+             background-color: #f1f3f5;
+             font-style: italic;
+        }
+        .speaker-name {
+            font-weight: bold;
+            color: #212529;
+            margin-bottom: 8px;
+            display: block; /* Make speaker name appear on its own line */
+            font-size: 1.05em;
+        }
+         .speech-block.speaker-音乐 .speaker-name {
+            color: #495057;
+         }
+        .speaker-text {
+            margin-top: 0;
+            margin-bottom: 0;
+            text-align: justify;
+            color: #495057;
+        }
+         .speech-block.speaker-音乐 .speaker-text {
+            color: #6c757d;
+         }
+
+    </style>
+</head>
+<body>
+    <div class="report-container">
+        <h1>语音访谈报告</h1>
+
+        <div class="speech-block speaker-音乐">
+            <span class="speaker-name">音乐:</span>
+            <p class="speaker-text">[音乐播放]</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">其实能称得上范式级别的，就是一个，就是强化学习RL这个事。</p>
+        </div>
+
+        <div class="speech-block speaker-音乐">
+            <span class="speaker-name">音乐:</span>
+            <p class="speaker-text">[音乐播放]</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">草莓更像是一个项目的代号吧，RL呢其实是方法，Qstar可能是最早的一个缘起的paper。 我觉得一个更形象的比喻就是说，你可以把语言和预训练比作人类的一个基因组，携带了人类几千年进化的基因。那么强化学习就是人类成长的一生。 语言模型pretrain遇到瓶颈，就是最近两个月吧，外界可能还不一定意识到说语言的pretrain已经到了一定bottleneck。 甚至说有没有一个可能性，今天不做强化学习的公司，下一波浪潮里面都跑不出来。</p>
+        </div>
+
+        <div class="speech-block speaker-音乐">
+            <span class="speaker-name">音乐:</span>
+            <p class="speaker-text">[音乐播放]</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">Hello, 大家好, 欢迎收听张小军商业访谈录, 我是小军, 这是一档提供一手高密度信息的商业访谈节目。 今天这期呢是我和广密全球大模型季报的第四期, 这期2024年Q3季报提前和大家见面了。 我们正在进入的9月份会是AGI的一个大月。OpenAI造势已久且绝密的项目草莓Strawberry将在不久后揭开它神秘的面纱，而这个项目暗示了硅谷AGI范式已经静悄悄的发生了剧烈的转移。 在纯靠语言模型预训练的scaling law这个经典物理规律遇到瓶颈后，多家硅谷明星公司已经把他们的资源重心压宝在一条新的路径上，它叫Self-play RL，中文名是自博弈强化学习。 只不过这个共识还集中在少量的核心的research圈子中，至今尚未扩散出去，那么Self-play RL到底是什么？ 它如何有别于传统路径？它能成为继续scaling law的一把神奇钥匙吗？ 嗯，希望我们的这个全球大模型季报啊，能帮大家了解最前沿的AGI动态，并且能持续的给大家带来一些新的启示。</p>
+        </div>
+
+        <div class="speech-block speaker-音乐">
+            <span class="speaker-name">音乐:</span>
+            <p class="speaker-text">[音乐播放]</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">广密之前三期的节目里你提到的很多预测都验证了。 那我们继续来做我们的这个全球大模型季报，今天是第四期。 三季度似乎在矽谷出现了非常非常大的变化，AGI可能出现了范式转移，这也让这期节目变得很特殊，因为中文世界里谈论范式转移的声音还非常的小。 那我们这期节目应该是对于范式转移解读最全面也最前沿的一个。 最近这两个月你思考最多的问题是什么？</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">对，我感觉语言模型预训练这个范式是到瓶颈了吧。 模型的scaling的编辑效益开始递减，那接下来的路线怎么走？包括这轮技术革命会不会就此卡住了？ 我感觉这个问题就很关键吧。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">现在得出了什么样的结论呢？</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">现在只能说有50%的概率就是传统意义上的scanning law已经失效了。 当然另外50%的概率就是说，沿着老的路由还能继续走向AGI对吧，继续怼10万卡。 感觉这两个概率half half吧。 主要是现在各种evidence还不够多，还不能往下这个结论。 也不能下判断说，这条路就到头了。 但你目前看到的就是说，纯靠加参数、加数据、加算力，这条路肯定是不容易了。 Model size向上scale都还是有些问题吧。 我们能看到就这几个要素嘛，参数、数据、算力。 你从参数上看，现在最好的模型应该都是六七百B的总参数的一个MOE的模型对吧？ 为什么在六七百B，基本上也是单台server，现在的H100能放得下的。 今天我们还没有看到向上涨个三五倍，两到三个T，两三万亿总参数的模型。 或者说你卖上去两三T总参数吗？但短期的收益效果可能还没有那么好。 包括怎么scaling的规律也没弄清楚吧。 那另外你从数据上看，就是说很多公司弄到15到20T的高质量文本数据，可能还OK对吧，比如说每个月再增加两个T，但你很难叫倍数据地增加到50到100个T。 我感觉就是还得用新的方法去突破数据的瓶颈吧。 那另外你看算力上，就是说英伟达H100这一个卡，单一集群最大搞到3.2万张，充分互联对吧。 全球应该能有三五家都能做到了。 就是在B系列GPU规模化出来之前呢，我感覺算力基本上也不太會有倍數級的提升。 就你看這幾個基礎條件，它不一定能支持今天的模型在GPT4或者Cloud3.5這個基礎上做大幅的提升。 我感覺可能走這條路呢，就是比GPT4O好一些，但不一定能像GPT3走向GPT4那樣叫叫顯著跨越的好吧。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">不能支持模型在GPT4O的基础上大幅跃升的原因是什么？</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">可能有几种情况。 第一呢，你可以说今天的scale up的幅度依然不够，对吧，你未来等B系列卡出来之后，再scale up可能就就解决了。 现在有可能就是处在一个真空的死亡地带，那说明H100这一代卡可能没有那么好。 那第二呢，你也可以说是执行问题，训练更大的模型就是比较复杂，就像发一个比如说中心火箭或者说芯片流片一样。 那失败因素是很综合的，你就比如说MOE很大了之后就是很难调，它的高矮胖瘦你怎么摆？ 你训练两到三万亿参数的MOE本身就是很难，因为现在业界主流基本上是六七百B左右吧。 那还有很重要的问题就是说数据问题，对吧，怎么搞出来那么多高质量的，而且真的能提升能力的这种文本数据。 包括能不能用好合成数据对吧？ 其实合成数据今天也没算fundamental的突破吧，大家都是去用模型去改写对吧，去扩充，把这些低质量的变成高质量的，数据重复其实对模型提升也没那么大。 更多高质量的逻辑推理数据我感觉可能是更重要的。 前面这两个问题我感觉可能都是短期问题，慢慢随着时间还是可以解决的。 但有一种情况，就是第三种情况，就是说最担心的一种情况，就是说纯靠语言的这种比较经典的scaling law, pretrain, 这个物理规律是不是就遇到瓶颈了？ 或者说就在比如说更大参数下，比如说两三T参数以上，就开始失效了。 那我们就得用新的方法才能带来更大的突破。 我感觉这个第三种情况呢，在B100 GPU出来之前，概率是非常大的。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">这个还挺让人惊讶的，就是scaling law遇到了瓶颈，甚至有可能在变大的过程中失效。 Q的时候你观察说GPU数据中心和物理硬件是瓶颈，现在似乎瓶颈是变得更多维度的。 不只是物理硬件这一个原因。</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">其实GPU数据中心和物理硬件依然是瓶颈。 但这个瓶颈吧，你没办法短期突破。 因为H100这代卡呢，你现在充分互联呢可能就做到3.2万卡对吧。 H100这太卡用起来可能不算太好，你看per dollar其实还是挺贵的。 我感觉有可能还是得B出来才能把参数scale up上去。 那如果在这个之前呢，有可能就还是得在有限的集群下吧，做一个叫新的scaling law范式的探索。 当然还有另外50%概率所在啊，就说可能就是留给马斯克的XAI。 马斯克是觉得算力决定生死的对吧，他们就拜访10万卡吧，对吧，这也是叫第一性原理。 我觉得也有很大的概率就是说马老师做出来10万张卡集群对吧，然后撑出来一个更好的模型，让很多人傻眼，我觉得也是有可能的。 但是算力往上加呢，其实加到10万卡其实短期挑战很大的。 我们能看到就是说你现在3万卡的集群，基本上没两个小时能break一次。 那10万卡集群呢，基本上是二三十分钟就break一次，其实综合利用率会下来非常多。 这个对数据中心的运维的挑战是很大的，你要快速的定位损坏的卡对吧，快速的插拔更换去上线。 我感觉就是说模型反正scale到两三T，刚才提到就是MOE更复杂了对吧。 有可能还有一个原因就是说实验不够充分。 那你实验不充分呢，你这些位子怎么摆，其实bug也很多。 那还有一个说法就是说做Dance model更容易。 比如说做到两三T的都是MOE，那MOE呢，其实有可能并不一定很好做。 但Dense model有一个缺点就是说它的training过程中GPU的利用率不够高，这也是一个问题。 包括刚才提到数据问题，合成数据也没有算突破嘛。 我感觉其实确实是向综合的，它不是一个叫单一因素。 算力的问题存在，然后MOE这个复杂架构的问题也存在，数据的问题也存在。 因为大家还不知道叫视频数据怎么用起来，对吧？ 有可能还是有一个新的架构未来会出来吧。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">如果scanning law在模型变大的过程中，它就不work了，你们看到哪些新的方法，新的路线来替代它？</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">我感觉可能能有两三条潜在的路线吧，我觉得每个公司也都有自己的一个bet。 我们首先说要多模态吧，尤其是视觉，很多人会说，哎，这个多模态的确定性很高。 只靠语言无法走向AGI，就还是得靠语言加视觉这种多重模态。 但是呢，你用大量的视觉数据做大公的训练，其实今天还没有任何证据能证明说，哎，我们能从视觉模态训练里面涌现出叫智能或者逻辑能力吧。 我不确定Tesla FSD这个算多模态还是叫单一模态。 其实AI最重要的一个还是叫通用泛化性。 你就像阿法Go下棋一样，你下棋做到世界第一，但你没法做其他的任务。 Tesla FSD或者说今天的所谓的通用机器人公司，今天在某一个特定设备上采的数据，包括训练的模型，其实你换到另外一个新设备上，其实是不work的。 我觉得这个其实是没有泛化的。 我是感觉多模态模型的几数路线还是没有像今天语言一样那么统一。 也许未来会诞生一个全新的架构，但这里其实是又涉及到基础科学的突破了。 这个你就不确定是一年两年三年还是五年十年能看到的。 因为你看现在视频生成今天都走一个叫DIT路线。 那是因为年初的时候Sora给大家给整个行业指明了路线。 短期你看DIT其实向上的收益还是可以的。 但我觉得能确定的就是说多模态肯定是能叫带来交互能力的提升。 有可能你交互能力上来， reasoning,逻辑推理能力也会提上来吧。 这是一种路线。 第二种路线呢，就是说那10万卡集群也是一个路线。 那就是刚才说的，比如说短期不成功，那可能就还是算力不够，对吧，处在一个中间的死亡地带。 那总有人要试试更大的集群。 万一对更大集群怼成功了，怼出了更强的模型，那我觉得会让不是的人可能会会傻眼了。 但是客观来讲，就是说10万卡集群充分互联的难度可能还是比预期的要更难的。 甚至有可能这是全人类目前遇到的最难的一个项目吧，可能比SpaceX发中心火箭可能还要复杂。 聊到多模态和10万卡集群啊，这两个其实都是叫确定性会发生的，我感觉就是时间问题，但是其实是还不够本质或者能称得上范式级别的。 其实能称得上范式级别的，就是一个，就是强化学习RL这个事。 今天整个业界，不管说硅谷包括中文媒体吧，其实提的还很少，或者说大家今天也不知道怎么做。 就今天的强化学习就是self play RL呢，我感觉这条路线还是最make sense的，天花板也最高。 其实我们能看到那个Anthropic那个Cloud Sonic，它那个从3走向3.5，你能明显看到代码和数学很大的提升对吧？ 其实这里就是强化学习RL带来的吧。 你用self play这种方法提升模型的逻辑推理能力，我感觉是接下来最重要的一个范式吧。 我觉得这是一个最核心最核心的变化，然后当然多模态10万卡和强化学习，这三条路其实并不矛盾的，其实也是可以并行的，但是你的资源有限，你就得掰趟你最相信的那条路对吧？ 如果我是一个AI公司的CEO，我肯定会200%的资源凹印到强化学习RL这条路线吧，我感觉这是目前最有机会走向AI的一条路吧。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">我来试图理解一下你说的这三条路线啊，第一条是多模态。 它不能确定到底能不能带来智能水平的提升，起码到目前为止它没有证据能表明。 第二条是10万卡集群，它能不能涌现出更强的模型要依赖于scaling law能不能继续work。 现在也还不知道。 第三条是你说的这个范式转移就是强化学习。 现在的RL主要讲的是selfplay RL，我理解的对不对？</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">是的。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">那能不能给大家解释一下这个RL reinforcement learning，简称是RL，中文是强化学习，给大家解释一下这个概念。</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">对，就是我们回到2018年，其实那个Lex邀请Ilia去MIT客座讲了一节课，Ilia选的主题其实就是强化学习和selfplay。 他当时就认为这是通往AGI路上最关键的方法之一。 就是当时Ilia用一句话概括了强化学习，我觉得非常准确。 就说让AI用随机的一个路径去尝试一个新的任务。 如果效果超预期，那就更新神经网络的权重，让AI记得多使用这个成功的事件，然后再开始下一次的尝试。 其实我们在实现强化学习的过程中呢，其实有两个元素是最重要的，这两个元素一直在反复的交互。 第一个就是环境。 AI你探索完成任务的环境，你比如说下棋的时候，那个环境就是19乘19的一个棋盘对吧？你训练你家的一条狗的话，那个有可能是就是狗主人的家和小区。 其实环境会发生变化，那环境发生变化的时候呢，AI就会从环境变化中收到 reward value去判断过去的哪几步探索是否有明显的收益，比如说你距离下棋胜利是否更接近了。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">这是一个奖励机制对吧？</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">对，这是一个奖励机制，这个奖励机制其实是强化学习当中，应该说最重要的一个要素吧。 其实第二个就是一个agent这个智能体。 其实agent这个智能体是从强化学习来的一个定义。 Agent对环境的观测和感知，它会来输出一个动作，就是agent它的目标就是也要得到奖励嘛，这个是最重要的。 这里面有几个基础概念，我觉得可以有一些科普。 就说刚才我们聊的智能体，比如说我们训练一条狗，这个狗就是那个智能体，它就是一个agent，它是一个学习的人或者是一个决策的人。 那个环境呢，可能就是狗主人的家或者小区。 那狗还有动作，比如说狗的动作是叫坐下，可以握手一些行为对吧。 然后包括狗的状态，它所处的一个位置。 包括你对这个狗的奖励，要么你给他一些吃的零食对吧，或者你就责骂他，这是正面信号和负面信号。 那我们可以把狗换成大元模型。 大元模型就是一个智能体一个agent本身了。 今天T它就是一个文本或者对话场景的東西。 那它可以輸出不同的文本或者各種action,甚至各種模態對吧？ 包括它也有獎勵，只不過今天文本的獎勵的噪音比較多，我們是不好定義這個reward model。 我感覺這個可能是一個今天還不清楚的。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">就是對於LLM來說小零食是什麼不清楚。 給狗是小零食，他很明確，就是給他零食，他就知道這是正確的。 但是或者摸摸頭，這對於他來說就是一種獎勵，但是對於LLM來說，就不知道他的獎勵反饋到底是什麼，沒有一個清晰的界定。</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">你看我們今天上億人用T,其實我們給到的反饋是沒那麼有效的。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">對，因為你可能很快就進入下一個話題了。</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">對，你包括點贊和點彩，有可能噪音也比較多。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">能不能進一步舉一些例子來闡釋這個RL。</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">我覺得有一個比較好的例子啊，你比如說咱們去一個叫深山去探礦尋寶對吧？ 一個人他有一個藏寶圖，但是我呢有5000個特種兵帶著一些專業探測設備。 你可以說我資源浪費，但是只要有寶貝，我有可能幾乎百%都能探測出來了。 而且比拿著藏寶圖的那個人有可能還更快，我就是把各個地方各種路徑反正都探測一遍嘛。 但是呢，假如說有其中的兩三個特種兵呢，鑑寶能力不足，他就會漏掉這個寶貝或者撿回來很多垃圾。 這就是那個獎勵模型reward model，那就出錯了嘛。 或者還有一個更形象的一個身邊的例子，就是說我們要訓練一個運動員，比如說一個馬拉松的運動員對吧？ 我今天是一個GPT，我已經通過語言和錄像已經學成了博士，各種知識道理都懂了。 今天我就設置一個目標就是取得馬拉松的一個最佳成績對吧？那我就會探索各種方法，甚至找漏洞的方法取得一個怎麼獲得最佳成績的方法。 比如說每次比賽都有一個正面信號和負面信號對吧？ 那比如說怎麼科學的飲食，什麼姿勢，怎麼肌肉發力對吧？ 你比如說前一天如果你運動消耗過量，那其實也會影響第二天的比賽吧，這就是一個負面信號對吧？甚至我可以找到捷徑。 你比如說之前比賽沒有禁止興奮劑之前，其實我可以吃興奮劑的。 那這個就是了比賽規則嘛。 那你就要制定新的比賽規則，這其實就是AI的safety或者alignment這個價值吧。 我感覺包括狗主人訓練一條狗，其實這些例子我感覺都是邏輯都是一樣的。 我覺得可以延伸的說，就是說這意味著什麼呢？如果基礎模型變強，其實我們每個人都可能有一個5000個特種兵,或者你有一個世界冠軍一樣,他們在各個領域去做探索。 那你可能就是一個教練員,指導他們怎麼做,人和AI一起去在各個領域拿金牌,我覺得這個是一個蠻有意思的會發生的事吧。 那這裡面的獎勵模型其實就很重要了。 今天業界獎勵模型最核心的還是在代碼和數學，因為就是剛才提到它的環境和目標很簡單很清楚對吧,容易設定。 但其他領域的目標和環境其實還不太好設定的。 那這裡也有一個更關鍵的問題。 就是說代碼和數學在未來兩年可以確定性的變得非常強，但能不能泛化到其他領域是目前還沒有證明的。 就是剛才提到go下棋很厲害了對吧，但其他領域不行。 那計算機視覺人臉識別也很厲害了，其他領域也不行。 AI最重要的還是一個通用和泛化性嘛。 如果你不能泛化到其他領域，我覺得那還是挺麻煩的，這波技術天花板有可能還是會受限的吧。 但是呢，即便不能泛化，那我們藉助大元模型在各個垂直領域做強化學習，我感覺應該也能在很多場景找到一些最優解。 我覺得下線有可能也是會替換掉傳統的積學習那一套吧。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">但我們說強化學習的時候，它應該跟什麼概念對比啊？它應該跟大語言模型對比嗎？</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">它是一個交替的。 我感覺歷史上神經網絡跟強化學習一直是交替發展的，就是每一個神經網絡變強了之後，大家後面都會提強化學習。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">那強化學習和大元模型的區別是什麼？</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">我覺得可以這樣說，就是大元模型是利用現有數據，主要是強調在利用這一個點。 那強化學習呢，更多強調探索。 它探索一個長距離，你給他一個非常粗的顆粒度的目標，然後他自己去探索各種能做成這個目標的一個路徑。 我感覺強化學習的核心就是說在探索和利用之間做一個權衡吧。 大模型在利用現有知識上我感覺已經做得狠極致了。 但探索新知識方面基本上還沒有做太多吧。 那強化學習的引入其實就是為了讓大元模型能探索進一步怎麼提升邏輯推理能力吧。 我們可以回看一下就是AI最經典的三大範式啊,就是監督學習、非監督學習和強化學習。 其中只有強化學習的假設是讓AI進行自主的探索和連續的決策。 我覺得這個方法是最接近人類學習的吧。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">我們現在說的是這個 self play RL, self play強化學習,它跟傳統的強化學習的區別是什麼呀?還有之前有個概念是RLHF,它和RL的區別又是哪些?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">對,我感覺傳統RL呢,其實跟今天的self play RL,我感覺最大的一個變量和區別就是說這個RL的主體的agent計算量增加了三到四個數量級。 你看最早的那個Alpha Zero,它應該就是一個千萬參數的神經網絡吧。 和今天的原模型應該差了三到四個數量級。 然後RLHF其實更大的一個目的是不是獲取機器智能,而是一個仁機對齊。 其實是讓AI做到更像人,但是不能做到超越人的一個叫超級智能嘛。 我覺得一個簡單的例子就是說RLHF呢,其實能像人類一樣更喜歡好理解的東西,而不是喜歡邏輯更嚴謹的內容。 Selfplay RL呢,其實更多還是奔著怎麼提升邏輯能力去的吧。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">那selfplay RL能提升智能水平嗎?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">目前在coding mass這個是很明顯的。 其他領域還沒看到。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">大元模型和強化學習和AGI他們三者的關係是什麼?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">我覺得這是一個特別有趣的話題。 就是說之前有一個特別有趣的描述啊,就是說語言是走向AGI的一個拐杖,雖然最近推特上很多人在批評這個表述啊。 其實很有道理,這個表述我體會了很久啊,就是說 首先說為什麼是語言啊。 語言是人類積累了幾千年對吧,是對人類歷史幾千年的一個壓縮總結。 又經歷了30年數字化變成了互聯網的token。 其實大模型誕生也是一個技術發展的必然嘛。 這是機器能學到的最高密度的一個知識。 那另外語言還有一個好處是什麼呢?它的通用性很強。 其實同一個事物可以用不同的語言描述對吧,同一個語言你也可以有不同的理解方式,它的彈性和容錯性就會很高。 你可以說語言是今天唯一走通範化性的。 傳統的其實沒有範化的,只能下圍棋對吧。 CV視覺也沒有走通範化性,只能做人臉識別對吧。 我覺得有一個猜想就是說 可以藉助語言這個通用和泛化性,讓這一波的AI能力泛化,走到更多領域。 通用人工智能的核心還是通用和泛化。 所以語言和預訓練呢,還真的有可能就是個拐杖。 它就是一個中間態的甜點前菜對吧,那後面的強化學習有可能才是主菜。 我覺得一個更形象的比喻就是說,你可以把語言和預訓練比作人類的一個基因組,攜帶著人類幾千年進化的基因。 那麼強化學習就是人類成長的一生。 你從出生那天起就開始接受正面信號,負面信號。 其實一個職業運動員,他的職業生涯也是一個目標和環境定義很明確的特定任務嘛,就是拿成績拿獎牌嘛。 所以我感覺不管黑貓白貓,能實現通用和範化,我覺得這才是實現AGI或者SI超級智能的一個關鍵吧。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">所以今天看光靠大圓模型可能走不到AGI。 也可以想,比如說AI可能是一個偏科語文的大學生,如果他要就業的話,他需要新的範式引入。 那大語言模型和強化學習應該怎麼相互補充呢?他們兩個應該怎麼結合?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">我感覺是一個接力關係。 或者說語言模型是一個做強化學習的必要條件。 因為這裡面非常重要的一個點是你必須要有很聰明的模型,才有能力做self play對吧,做探索。 如果一個人他沒有一定的能力,他做自我的探索,其實能力也不強的。 我覺得這個標準有可能是至少賣過GP4或者Cloud3.5這個水平。 如果你模型能力不足,那你做self play的效果還是會很差的吧。 那你想做好強化學習呢,我感覺還是必須要有這一步的。 其實呢還是一個必經之路,但R呢又是一個確定的未來。 我感覺做AI的人應該都會意識到就是你做最終往後一定會走向R的。 不是今天,那就是明年對吧? 剛才提到就呢其實是讓模型學光了網絡上的數據對吧? 總會學完的。 那通過self play這種自主探索,那你在選出更高質量的一些case去學習,這是一個長期才更能scale的一個路徑吧。 但我覺得還有一個更深層次的一個就是說self play這個方法本質是用AI無限的算力來補數據不足的這個短板嘛。 就是數據不夠算力來湊,我感覺也是符合當下AI的一個優勢的吧。 其實一個好的self play呢,其實能合成大量的高質量的數據,甚至可能比人類歷史上建過的棋局對吧,遊戲的數可能還更多。 其實用這個數據量有可能也能做到叫超級智能嘛。 其實你看阿發下棋,刀塔遊戲對吧,其實都探索出來了跟人類不一樣的玩法,也戰勝了很多叫金牌選手對吧。 那還有一個循環我覺得很有趣。 就是說self play合成的數據再用到。 那激發更大的的一個計算的需求。 那那這樣的話,整個大語言模型的呢,其實就變成了強化學習系統的一環。 強化學習變成了一個更核心的系統,那這樣一個循環有可能才能更好的走下去吧。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">我可以理解這個範式變化是矽谷線人工智能領域當下發生的最大變化。 這個變化你觀察到是什麼時候發生的?它很突然嗎?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">我感覺Cloud3.5是一個標誌性的產品吧,它應該是6月20號發的那個3.5te。 其實我們能看到那個代碼和數學是顯著提升。 因為很早就重視強化學習。 我感覺好像就拜湯兩件事,一個是下一代模型,一個是R強化學習。 好像也不搞,不搞search,好像主線就是R。 R這個事呢,我感覺在研究層面其實很久了。 其實你看Open最早就用強化學習的方式去打刀塔遊戲對吧? 但我感覺核心變量還是語言模型的能力發展到了一定程度,就是用大模型做self play這個事其實變得有效了,我覺得之前是做的效果不太好。 但是我感覺語言模型遇到瓶頸就最近兩個月吧,外界可能還不一定意識到說語言的已經到了一定了。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">你預計RL的上線是什麼?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">RL的上線就是coding, mess沒法泛化到其他領域,以及其他領域你制定不出來好的reward model。 但是呢,如果你把coding能力變得很強,我們未來用自然語言後端實時編程,它有可能也會巨大的加速我們整個數字化的進程。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">你剛才提到的這幾條路線在一些明星公司裡面,他們資源會怎麼分配?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">我可以這樣說,應該說只有一兩家公司把R當做了最高優限級。 我感覺好像對語言的優限級放到了第二位吧,那如果是放到最高優限級的話,那就應該給最多的computer資源吧。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">因為9月份和OpenAI應該都有新模型要發布,大家都挺關注的。對於這兩模型有什麼可以值得期待的?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">我感覺首先是Cloud3.5s,這個進步幅度應該還是會很大的吧。 因為你看te從3到3.5,進步幅度挺大。 不知道OpenAI會發什麼樣的東西,但是呢,你看草莓已經造勢很久了,我感覺應該也是在R這條路線一下。 那代碼和數學肯定是大幅提升的。 我感覺這個提升的幅度應該都不會壓於te從3到3.5。 但是會不會真的發新模型,這個不好說。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">這樣的話,如果是有新的範式,那之後GPT6和7還會有嗎?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">我感覺如果只靠傳統加參數ling,我覺得短期預期不高了,我覺得範式還是變了。 但是我還是相信就是說接下來一代代的模型還是會變得很強。 不知道還用不用GPT567這種代號吧。 也不確定的是模型的參數會不會倍數級的變大。 我覺得還有一個可能就是說參數並不會增加很多,有可能比如說就是GP或者Cloud3.5這麼大的參數的模型,但未來也能持續變得很聰明。 也能達到大家對GPT567的一個預期吧。 我覺得還有一個點就是說,我明年有可能就會看到很小的一個模型,可能比今天的GP還要聰明的很多。 單位參數下智能水平提升還是很快的。 所以這裡面有一個期待就是說,有可能實現到不一定需要巨量參數的模型。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">所以在矽谷實現AGI的方法和範式其實已經徹底變了,但是我們可能到今天還沒有意識到。</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">我感覺是。 不過新的範式下有可能也有很多卡點對吧? 你比如說剛才提到model它能不能泛化到更多領域? ding和mass其實提升的確定性是非常高的。 因為下棋遊戲、數學、code,這些環境都有明確的勝負對吧,可以比較好的做self play。尤其是coding,極其樂觀。 然後但是你看物理和醫藥,那你做了self play有些結果之後你還要做臨床的驗證。 這個週期物理的週期是很長的。 那你看法律和金融,這裡面其實沒有太多標準答案的。 但有可能我們做到偏好和偏壞,比如說我寫了一個memo,他寫了一個memo,有個裁判來 comment說哪個memo好,那也有可能的。 投資裡面其實你看一級市場呢,你構建model其實就過於前瞻了,這個反饋就太長對吧,那二級的噪音又很多。 但是你看文字創意這些領域,有時候經常各種劇情反轉跳變,這個其實AI是比較難捕捉的。 我覺得其實還有挺多問題要解決的,就是能不能有一個絕對通用泛化的model應用到各行各業? 這個是不好說的,或者說你只能在垂直領域一個個的構建。 但我覺得還有一個點就是說,大家期待另類架構也很多。 從更基礎更底層的架構出發,不是transformer,而且是一個未來應用到全模態,尤其是視覺。 這個有可能也是需要天才科學家去突破的吧。 另外我覺得可以提嘴就是說,大家對天才科學家的value,我覺得還是應該更高的。 其實你看character,這個就超過了20億美金嘛。 Google收了character,主要還是為了嘛。 其實這個賬也很清楚,其實你看如果對整個Google能提升1%,那就是200億美金。 那你看Google肯定也能佔到Google的市值的10%吧。 那肯定也是確定的能對提升1%吧,其實也就是200億美金。 我感覺這個在傳統估值體系下,其實是不被認可的吧。 這個收購價格就等於Google一天的利潤嘛。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">好的,說到這一點,你怎麼看caracter.AI的出售啊?它給今年的AI市場帶來了什麼信號?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">我感覺就是上半場完全結束了,下半場正式開始了。 能進入下半場的選手呢其實不多。 我感覺加入Google也是從Google進入下半場了,那就是這個新範式嘛,self play R這個事成為主角了。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">大模型的關鍵要素大家覺得是算力數據算法,那這個新範式self play RL它的關鍵要素是什麼?它對比大於模型來說難度怎麼樣?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">我感覺R呢,它其實不是一個模型,它其實一整套的系統包含了很多東西。 其實剛才我們提到的那幾個,包含智能體對吧,那個agent可能就是模型對吧? 還有包括環境,這個環境有可能是狗主人的家,一個是coding的環境,還有可能是垂直領域對吧? 那動作 action也是很重要的,到底是什麼是狗的這種坐下,或者一些行為,還是說其他的模態的輸出。 包括獎勵模型也很重要。 如果說最重要的兩個東西,我感覺就是環境和智能體吧。 智能體的目標其實是要來得到更多的獎勵的。 其實這裡面呢在原模型中的一個思路本質上是inference time去換 training time。 其實是來解決模型向上時,暫時編輯收益遞減的一個現狀吧。 我感覺這個勢必也會對帶來很多新變化吧,或者說應該是傳統的ling law work了,但是新的ling law又開始了。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">by the way,這個新範式下還需要那麼多GPU嗎?很多人可能會很關心因為達的股價。</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">這個其實有點不確定。 我感覺在R的新範式下,其實就要被重新定義了。 因為訓練時候的計算量,它不只是和參數輛上升有關,還多了一個新的變量,就是說self play探索時候的inference的這個計算量吧。 因為R的思路本質是用inference time換 training time嘛,那來解決這個編輯收益遞減的問題。 之前我們算過一個賬,就是說對GT4和Cloud3.5這種水平的模型呢,我們算下來就是說你要合成一個T的高質量的推理數據,大概要6億美金。 如果你合成10個T的高質量推理數據,可能要60億美金。 其實這個量級也很高。 但跟預訓練不同的是, inference呢,其實對單張卡的性能和集群規模的性能其實相對低一些。 也就是說不一定非得用最頂尖的卡,或者3萬卡,10萬卡的集群,分佈式的集群其實也可以跑R的 inference。 所以我感覺就是說新的範式像呢,依然存在。 那計算成本可能還是會大幅的提升,來提升模型能力,但提升的不一定是模型參數量的快速增加吧。 長期是否還需要那麼多GPU,我感覺就得看做強的效率吧,今天看資源是比較浪費的對吧? 因為你跑的步驟99%最終都是無效的,但是你還是得跑對吧? 因為你一開始沒有那張藏寶圖對吧? 那要解決的是很多沒碰到過的新問題。 我覺得確實是存在大量資源浪費的,除非說未來更高效。 另外如果做推理的話,我感覺不一定也非得依賴英偉達的GPU了,其實其他的AMD啊,包括其他的芯片,有可能也能work的。 當然英偉達GPU還是性價比最高的。就是說英偉達有可能比其他芯片公司的領先地位還是拉大的。 他肯定也是能cover住這個新的範式變化的吧。 就是說英偉達股價,我感覺就是說,因為二級市場是容易現行外推的嘛。 也許明年後年英偉達就是全球利潤最高的公司對吧,可能比蘋果利潤還要高,千億美金利潤。 但我感覺現行外推的訂單短期可能沒問題。 但AI的續勢變化,我感覺還是很劇烈的,如果你說長期變化,我覺得還是挺難下判斷的。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">AGI範式發生轉移這件事情在矽谷的共識程度到底怎麼樣? 是所有人都共識了還是只是一部分人開始這麼做了?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">我感覺只有在最核心的 researcher中間有一些共識吧。 有可能也就幾百個人,我感覺還沒有完全擴散吧。 或者說很多人都知道R很重要,但是不知道怎麼做。 這方面人才也很稀缺,還不是傳統R的那些人。 我感覺很多AI的管理層可能還沒有意識到。 因為最近也只有少量的一些paper才開始發出來吧。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">楊樂坤最近又在批評強化學習RL,說這是資源浪費。</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">但你看愛迪生發明燈泡也浪費了大量的實驗資源對吧?但你只需要成功一次嘛,那你就可以大量複製。 我覺得現在喜歡說話引起爭議吧,有爭議才有流量嘛,效果才能被放大了嘛。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">他有流量幹嘛?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">我感覺就是文人的好聲心吧。 彼此有時候瞧不上,有不同流派嘛。 其實每個流派都有各自的道理的,都要給自己的流派站台嘛。 對,我們是博客說的都很紮實的,不直求流量。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">嗯。 所以基於上面說的這些,你對AGI的現狀是更樂觀了還是更悲觀了?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">一開始這幾個月發現語言模型的遇到瓶頸不順利,我感覺還是悲觀的,之前覺得2526年可能才會碰到瓶頸嘛,沒想到這麼快。 但是想了兩個月之後呢,感覺更樂觀了。 覺得self play RL呢,這個事work了之後呢,感覺離實現AGI和SI超級智能,我感覺更清晰了。 我感覺強化學習打開後的天花板還是更高的。 我覺得離實現AGI更make sense了。 包括我自己使用Cloud3.5,也是一個切身體會吧。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">有什麼最有效的指標能夠衡量RL的進步?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">我感覺一個是AI能寫出的有效可靠的代碼的行數。 就去年的時候只能寫20行。 今天能寫幾百行了,也許明年就能寫幾千行了。 你比如說今天你讓他寫一個美團官網的這個程序對吧? 其實那個Cloud3.5 Sonic,我感覺是一個顯著的提升吧。 其實最近你看那個cursor很火,cursor很火 背後就是我感覺很大的原因是他接了Cloud3.5。 以前不work的事,今天work了。 我覺得這是一個很大的。 代碼的行數是一個能有效體現的很量化的一個指標。 然後我覺得還有一個指標就是說,這個有一個公開的比較權威的那個數學題的測試集吧。 GPT今天就解決七八十分。 我覺得未來在沒有人工干預的情況下,能不能得到100分,全部解答。 不知求速度,讓他self play自己去解。 如果全對了,那我覺得是一個很大的突破。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">強化學習RL目前全球來看誰最領先?這個是不是Google Deep Mind強項?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">我感覺還是和Open比較領先。 因為去年訪談的時候就公開提到過。 包括你看也在造勢草莓對吧,Qstar, 我感覺背後其實也就是強化學習RL吧。 Google呢,它是在傳統的強化學習很強。 新範式的這種self play呢,其實還不太確定。 但DMan的人才優勢還是挺強的,但不確定管理層是不是重視吧。 我感覺除了這幾家之外,其他的模型公司應該還沒開始重視或者不知道怎麼做,甚至拉馬應該還完全沒有。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">接下來我們有什麼值得期待的一些大的事情或者節點?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">我感覺就是接下來的一兩個月,Cloud3.5s和ku這些模型發布。 包括Open肯定也會發新模型對吧?因為草莓也造勢很久了。 看看效果怎麼樣嘛。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">你覺得會讓我們吃驚嗎?就是超出我們的預期嗎?草莓這個項目?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">我感覺能力還是會變強很多,某些能力上會很強,尤其是coding mass對吧,那在局部領域在未來一兩年,我覺得coding是確定性更高的能看到局部的吧。 或者局部超過人,你讓他寫一個很複雜的程序,在人的指導下,一個不會寫代碼的能生成一個很複雜的程序。 我覺得這個是很很有可能的。 最主要是人的預期太高了,我不確定模型的疊代是不是滿足大眾的一個預期。 因為畢竟coding還是專業領域的,很多大眾群體有時候感受會不到的。 我覺得更長期的一個期待就是看強化學習的天花板能走到哪吧,能不能在更多領域泛化通用,我覺得這個是更重要的。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">在你來看,國內公司現在應該全面的跟進RL嗎?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">我感覺如果Model size短期上不去的話。 這樣其實對OpenI這種頭部公司是比較麻煩的,就是說對後面跟進的公司應該還是利好的吧。 我感覺如果是我導的話,那應該凹印200%的資源跟進吧,或者說怎麼去發揮人力的優勢,用更多的人去標數據,去設計真的有效的reward model對吧。 但這裡有個前提就是你沒有一個很強的底座模型,是沒辦法做self play的,你做那個效果是很差的。 或者說別人用很強的模型看到的東西,你用很差的模型是看不到的。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">大家有可能利用這個RL玩到超車嗎?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">我覺得會有的。 但是,我感覺語言模型跟R呢,它是一個乘級關係,是一個A乘B的關係。 如果你這個A別人是八分,你是兩分,那你那個B變化很大,撐不上去。 我感覺是一個乘級關係。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">範式變化有可能會給市場帶來什麼樣的結構性改變?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">我感覺就是下半場開始了嗎?以後就是R的天下了嘛。 我感覺目前看reward model能泛化到整個文本推理領域,這個概率目前還是比較小的,因為不同領域對model呢定義很不一樣。 其實這就給了很多創業公司去建立垂直領域model的一個創業機會吧。 但我感覺更具體的,你得看OpenI是不是把reward model的接口開出來,我覺得這個是很關鍵的。 其實每個領域都值得建立一個垂直的reward model,這樣我感覺在每個垂直領域都有很多的收益。 那創業公司呢就得找到這個reward signal,我覺得這個是比較重要的。 我覺得機會挺多的,比如說一類是給垂直領域建立reward model的,比如說金融法律對吧,還有一類是通用的,就是說你用一個agent,建立一個通用的場景,比如說一個瀏覽器,也有一些公司在做吧。 但還有一個大的變化就是說有可能不需要叫超大規模的單一互聯集群了。 其實這裡面不確定的是GPU需不需要那麼多,但短期肯定是需要的,長期不好說。 不過我感覺這裡面我自己最興奮的是coding編程,編程能力的民主化,我覺得這個是一個很重要的賽道吧。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">by the way再問一個問題啊,假設模型能力就停留在GPT4O的這個水平會怎麼樣?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">我覺得也有一半的概率能實現AGI。 如果R能放的話呢,我覺得沒問題。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">如果不能呢?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">那下線可能也是能把傳統的機學習都替掉,以及coding會很強,那coding如果很強,有可能也會在很多領域加速。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">好,我們接下來聊聊矽谷的AI的賽道。 我自己先說說我對國內市場的感覺啊,因為我覺得去年和今年初大家中國的投資人在狂熱的用club deal的方式投了一波大模型公司之後,今年中國最火的投資主題好像就是人形機器人了。 那矽谷呢?就是你怎麼定義矽谷的AI賽道?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">對,如果是新的AI賽道的話,因為我們自己只看模型嘛,我覺得具體來說就是得靠AI這一波模型為基礎的。 我們自己畫了幾個圈啊。 最大的一個圈就是大約模型對吧?這是這一輪技術革命的核心。 那圍繞大約模型呢,其實外面有三到四個圈。 我感覺就是說搜索,coding,視頻,包括理解和生成,還有機器人。 我感覺就是一個大圈可能套四個小圈吧。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">可以展開聊聊每個賽道。</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">我可以先說一下代碼,就是說為什麼代碼會成為一個單獨的一個賽道,是不是足夠大? 其實你看代碼這個方向過去一年在矽谷還蠻熱的,就是有四五個獨角獸公司吧。 AI程序員,,ment,還有magic,還有巴黎的Post。其實這幾個公司最新都已經二三十億美金估值了。 包括好幾家產品還沒法用的,那個包括還有Cursor對吧? 一個最近特別出圈的編程工具。 Cursor火呢,我感覺背後最核心的還是Cloud3.5te代碼能力變強了,就是剛才聊到有效代碼從幾十行變成幾百行。 我自己有個比喻啊,就是說Cloud3.5te可能就是這個行業的iPhone的攝像頭,今天的cursor呢,可能就是一個基於這個攝像頭之上的一個拍照工具。 今天的cursor呢,我覺得還是給專業群體的一個工具,還是很早期的。 其實我覺得最期待的就是能一個給大眾級消費的coding編程工具。 就是為什麼期待大眾級呢,就是我感覺背後還有一條叫技術民主化的一個趨勢吧。 就是說你看Adobe的 Photoshop其實在創意和內容裡面很強,全球兩三千萬的專業設計師,這個吃飯都靠這個對吧? 但是你看在大眾群體裡面基本上還有抖音簡應這種消費級的,而且活躍用戶都是上億級的,比 Photoshop幾千萬呢還要大一個量級。 其實你看iPhone是有攝像頭的,但抖音沒有在蘋果對吧,還是有一個獨立的超級應用。 我覺得未來有一種情況就是說,我用一個自然語言描述我的任意一個需求,比如說我給手機說讓超市每週一8點給我家門口送到一些水果這週的食材對吧? 今天是沒有一個程序能滿足我的需求的。 甚至說以前的程序只能滿足頭部的需求對吧,常委的需求就是沒有被滿足的。 那我感覺就是未來就是一個自然語言編程,然後 agent是叫多部長距離的推理能完成的對吧? 我感覺如果投coding的話只做專業開發者群體是有限的。 我感覺上線天花板可能就是,1個幣對吧,然後我覺得最有想像力的故事還是應該去做大眾消費級市場。 它有可能就會有一個叫task engine,叫任務引擎。 Google是一個叫搜索引擎,search engine。 我感覺這不就新一代的Google嗎? Google是信息對吧? 那task engine就是說完成任務,那完成任務才是這一輪技術革命下最核心的一個主題嘛。 當然這裡面誰來完成不好說,是不是P完成了,甚至說現有的搜索公司完成了,還是說落到這些coding的公司?我覺得不確定。甚至說今天做專業群體的編程工具的是不是能下沉做到消費級群體?我覺得也不好說。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">之前我們博客說到ty是能夠匹配現在模型能力的最好的應用,那在RL的這個新範式下,現在能匹配這個模型能力的最好的應用方式是不是就是coding呢?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">對,我感覺就是coding。 有可能就是今年的ty,模型能力匹配產品最match的一個階段。因為就是剛才提到 代碼生成能力從幾十行到幾百行,那變得更加的work了。 但cursor跟ty,我感覺我們也在想這個對比啊,就是說搜索和廣告這個市場是足夠足夠大的,你搶過來1%,這個生意都很大。 但代碼呢,其實付費群體是不夠大的。 其實這兩個領域它都有個巨頭的,編程工具最大的是微軟的VS Code,那個壟斷性也很強。 但是廣告的生意足夠大,我感覺這個是一個相對的不同吧。 但另外就是說ty和cursor今天它的門檻都還是偏高的,就是怎麼下沉到更大的大眾消費機市場,我感覺這個可能是大公司出現機會的所在的地方嘛。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">中國有和嗎?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">Mitark。 Cursor還沒有。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">這是coding,那下面是視頻,除了coding呢?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">除了coding就視頻,我感覺coding和視頻是我現在最興奮的兩個賽道,覺得應該去bait的兩個吧。 為什麼視頻呢?就是說,首先我們能看到S出來之後,過去的半年視頻生成的進步效果非常大,其實你看半年前一個人走路那個動作是很慢的,今天是很絲滑的。 其實Sora給行業的推動,我感覺是很大的,就是給大家指明了可以走向DIT這個路線嘛。 為什麼看視頻?我感覺就是大家可能遠遠的低估了創意和內容這個賽道了。 其實你看手機有了攝像頭之後,每個人都可以拍視頻了,就有了抖音對吧? 其實很多抖音的視頻播放量能能幾個億,影響力完全比傳統的大導演影響力還要大。 但如果視頻生成能力如果很強了呢,那我覺得人人可能都是電影級別的一個導演了。 我們每個人都有自己的想法和創意,只是說之前沒有能力實現,今天呢可以低成本的實現了。 就以前一部電影可能幾千萬美金,上億美金的拍攝成本,那未來有可能很多爆款的電影可能就幾萬美金的成本,從編劇到生成到甚至到營銷。 我覺得甚至可以簡單的說就是說,未來AI能不能產生更多的李白杜夫、畢加索、凡高。 就AI生成的內容質量是更高的,人和AI共創可以有更多的天才的想法能被實現,我覺得這是一個很興奮的。 我覺得電影只是一個例子啊,就是說因為今天AI的可控性還有限,那有可能在遊戲領域可能是更早容易落地的。 我覺得遊戲是一個非常有意思的吧。 但是今天的視頻生成呢,整個格局特別不穩定,它不像語言模型一樣,大哥老二做次比較清楚。 視頻生成其實這整個領域的風險我感覺是巨大的。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">為什麼他不能穩定下來?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">技術架構沒有統一。 今天叫各領風騷100天,每家都有一個自己的,比如說有的人去做廣告群體,有的人去做電影動畫。 用的數據也不一樣,有可能我感覺這個會像內容行業。 有可能它不像語言模型一樣贏家通知,它有可能是分散化的一個。 視頻這個賽道是很誘人的,但是風險很大。 如果你往大了說,它可能有新的TikTok這種級別的機會,但是這個窗口有可能是比較長的。 今天已經開始了,但是有可能這個決勝的窗口可能是得持續個三四年,所以我感覺這個過程中就得緊密的去跟著,甚至說你今天可能就得下場或者去bait一些東西。 包括未來技術架構也是會變化很大的,有可能會有完全全新的架構出來吧。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">視頻不只在生成理解也很關鍵。</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">對,其實你看Mataban眼鏡,這個就蠻有趣的。 它現在可能銷量有個上百萬台,但假如 全球有一億人每天帶著這個眼鏡, 我覺得他能從我們日常習慣裡面總結出來更多的、人類的習慣、商業的習慣,我們沒有發現的規律,我覺得他就是新的牛頓嘛。 能總結出來很多、我們沒有發現的規律,而且這個可能還是採集了非常關鍵的一類數據,有可能這是機器人需要的很重要的數據。 第一視角嘛。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">你怎麼看語言和視頻模態的關係?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">我感覺語言還是最難的,就是剛才提到,它是一個、人類幾千年的一個抽象。 語言的競爭其實是最激烈的,坐次排名,我感覺今年跑完基本上是就穩了,別人想再翻盤,我感覺挺難了。 但是視頻的格局呢,其實坐次很模糊,變化會很大。 我感覺有可能有一個語言底座再加其他模態有可能是相對容易的,但其他模態想反向的再做好語言模型的底座,我感覺是比較難的。 視頻那塊有可能會獨立,或者多家共存,就像內容產業也是有可能的。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">視頻生產你最看好的是哪家公司啊?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">我覺得現在比較難說,因為格局不穩定嘛。 bait任何一個出創公司風險都是很大的,你只能在這個階段相對選最優。 因為之前最早runway很火,後來Pika的營銷很出圈,今天從視頻生的流量上,luma是runway和Pika的七八倍了。 包括hyper有些產品做的也不錯。 包括今天我們還不知道OpenISora2.0進然怎麼樣,它肯定是資源上人才上肯定是更強的嘛。 你包括自己跟Meta,它肯定是核心輻射之下嘛。 我感覺今天不好說哪一家最好,我覺得這是一個在未來三四年也是一個關鍵的決逐的賽道吧。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">除了coding和視頻,第三個是機器人。</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">通用機器人嘛。 其實矽谷這波通用機器人的hype我感覺還是OpenAI帶起來的,就是大家想賭一個巨身領域的OpenI嘛。 但這個賭注呢,我感覺不是一個商業和投資問題。 其實還是一個基礎科學能不能突破的問題。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">好像還挺早期的。</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">對,矽谷的這些通用機型公司,我感覺本質上都還是一個research lab,還不是一個商業公司。 但這個lab呢,你說到底是兩三年突破,還是10年突破,我覺得不好說的,今天肯定是靠著10年這個時間維度的。 我感覺這裡最核心的是說誰能像OpenI一樣,能融到二三十億美金,你能有足夠的資源多試錯幾次。 如果沒有基礎科技突破,那我感覺這裡面優秀的人才還是會被大廠給截命過去吧。 但另外一個你看不同的是,大語言模型跟機器人,機器人的重要性 對大公司來講,其實沒有像語言那麼重要,語言好像在每個科技巨頭的主線之下,因為不是每個巨頭都得要做機器人的。 今天做機人的巨頭,我感覺主要是Google,Tesla還有Amazon,這三個吧。 其實你看Google Tesla內部的團隊,我感覺都比外面還要強,每年投入幾億美金,他們自己並不一定會像微軟一樣去支持一個巨身的OpenI嘛。 我感覺還有一個很關鍵的基礎科技問題就是說,今天還沒有在通用機權領域看到通用和範化能力。 大家都是針對特定場景去做一些叫模仿學習。 A設備採集的數據,B設備現在還不能用。 我覺得這就是一個有趣的吧。 甚至說你今天採數據的成本都很高,從幾十美金到幾百美金不等,甚至每個場景都要採幾百個小時,場景 和產品定義,今天沒有看到哪個好的,或者說 你真的願意買一個帶回自己家的,就真的有用的。 你今天讓他幫你把衣服放到洗衣機裡,再放到烘乾機裡。 你讓他去把吃完的這些餐具放到洗碗機裡,再倒上洗碗液,這個好像都做不到。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">對,而且他可能做到了A這個場景,B就做不到了。 完全沒有。</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">對。 但我感覺中國的語數是比較好的。 他起碼可能是一個機器人的副車康,這是打底的。 那其實這個背後還是中國的供應鏈優勢比較強。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">現在美國的通用機器人有哪些明星項目啊? OpenAI投資了一個機器人公司叫Figure AI,你這個有了解嗎?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">對,我感覺美國我認為的最頭部的是兩個吧,一個是派是Google robotics team出來的, Chelsea,他們幾個,我感覺是人才上絕對最強的一個。 然後還有另外一個是自動駕駛公司Cruise的創始人做的The Boat。 我感覺這兩個是核心圈子包括那些researcher認為最頭部的兩個吧。 除了這兩個,我感覺聲量或者融資比較大的還有紅山美國投的一個scale的AI,還有一個figure。 差不多這幾家公司。 你剛才問到figure,我感覺他是融資能力比較強,CEO講故事能力特別強。 而且OpenI投了他。 我感覺好像就投了幾個米,並沒有投那麼多錢。 CEO好像講了一個故事說OpenI的機器人的模型交給他們做的。 我感覺其實合作形式可能就是figure給OpenI一些機器人的數據,然後OpenI有一個團隊幫他翻一個機器的模型,figure去把這個東西端到端弄好。 但我就感覺figure這種定位吧,你的AI能力也不是最強的,硬念能力又不如中國公司強。 他只能說在矽谷的話,硬念能力相比其他公司強,就是端到端優化可能好。 我總感覺競爭力定位比較尷尬,那硬件肯定還沒有特斯拉強。 反正我感覺這個公司是有點被高估的,人太密度上好像也不見得有另外幾家公司強嘛。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">所以你覺得第一T隊是The Pi和The Boat?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">對。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">中國的第一T隊你覺得是誰啊?在通用機器人這個賽道?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">我覺得還是非常不清楚的,今天去投通用的 timing我覺得還是比較早的。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">投人形呢?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">我覺得人形和通用是一致的。一件事? 一件事。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">他沒有可能先把人形機器人這個形態做出來,然後再等著通用能力灌到這個機器人裡面嗎?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">我覺得最後是需要fundamental基礎可以突破的。 沒有範化,通用我覺得是來不了的。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">據你觀察,國內的機器人和矽谷的機器人項目團隊有哪些不同啊?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">我感覺國內應該走特斯拉這個路線吧,從模型到硬件端到端。 AI在模型上可能投入不用很大,你就等開源嘛。 那國內做,你肯定是先定義好硬件產品或者場景,你先找一個特定場景去落地的。 你像特斯拉就有出行這個剛需場景,手機也是有一個通話那個剛需場景,你才能落地把輪子轉起來。 我感覺今天想做場景或者動作上完全通用,這個技術上本身就是不work的。 你做了A動作,B動作是沒有泛化的,你在A設備採集,B設備也不能用對吧? 我感覺矽谷現在都是想投一個基神的大腦,那想做OS或者安卓。 但國內你就讀整級嘛,OV小米對吧,好。 但我感覺還有一個就是說,從終局來看,有可能不會是一個AI模型適配所有硬件。 你像iOS安卓是一個設備所有硬件,但是我感覺機器人A設備採的東西B設備不work。 它有可能就是得端到端的從模型到硬件到數據端到端的優化。 我覺得有可能是你就得找到一個好的大的場景去大規模的收集數據,針對這個單一場景去端到端的優化。 而且AI能力還只在這一款上先體現。 我覺得特斯拉那條邏輯可能還是make sense的。 其實機器人跟自動駕駛我感覺還是相通的吧。 但矽谷除了特斯拉以外,製造能力都不太行,我覺得肯定還是需要中國的供應鏈能做出來了吧。 矽谷我感覺是看不到有什麼整級全套的產品出來的。 人形通用這個大爆發,這個 timing可能還是得叫五到十年,這個範疇吧。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">很可能這批公司沒有真正做出來,我覺得很可能五到十年大家都還在一個research lab的一個階段。</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">所以那你就要bait最牛的、最獨特的一些科學家人才了,你等著被大公司收購嘛。</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">但矽谷是容易收購的,中國好像這個收購習慣不多吧。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">通用機器人最核心最核心的還是技術的 timing,所以在矽谷投一個機器人大腦,在國內投整機,這個我感覺是一個比較海智。</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">但又有一個悖論就是說,是不是有可能不存在一個機器人大腦?有可能這個大腦就是GPT或者通用的大模型。 你做一個機器人大腦呢,有可能它也不適配所有硬件。 A機器的數據不能用到B機器上,這也比較尷尬,還得端到端的設備。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">今年巨身智能這個賽道真是太火了。 國內的投機器人的投資人說在大腦層面,國內有很多做這方面研究的華裔的科學家,所以他們不擔心在AI能力上追平美國,他們覺得這個差距是要比大模型要小的,你怎麼看?以及你覺得中國的這些公司有沒有這種research lab的文化?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">我感覺國內硬件能力肯定是非常強的,國外的AI能力是非常強的。 我感覺如果能有什麼團隊能把這兩個能力結合到一起,這個肯定是最好的。 然後你從大模型到多模態再到巨身智能,包括未來的世界模型,我感覺這是一個AI發展的過程吧。 其實每個環節都有自己價值。 甚至說這裡面的很多的人才是可以跨界的吧。 你比如說做多模態的研究,其實就能促進機器人和世界模型的研究。 這裡面其實挺多華裔背景的科學家的吧,也有不少人回來了。 我覺得是有可能培養出來一些比較好的AI research的文化吧。 但我感覺除了人才,其實經濟基礎是最重要的。 經濟基礎這種創新環境,甚至說信仰,我覺得這個比較虛啊,但其實很重要了。 其實這兩年願意回來的人還是在減少的,相比七八年前。 我感覺國內也有國內的優勢,就是說各種硬件支持供應鏈,也不一定非得照著美國那套邏輯去一等一的去弄,我覺得最現實的可能還是說解決一些具體場景的具體問題。 也不一定非得用最強的AI能力。 我覺得今天國內做通用其實還是有點早。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">現在是投機球最好的時候嗎?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">我覺得看什麼角度吧。 如果期待投一個很強通用的能力的,或者說在家停工廠做完全通用的任務的機器人,我覺得今天肯定不是最佳的timing的,我覺得這個timing還挺遠的。 但今天有這麼多資源和人才進入這個領域呢,最後也不至於說完全做不出來什麼東西。 比如說美國的機人大腦,機器人的foundation model,我覺得肯定還是會有進展的,那這幫優秀的人才團隊可能還是有很大概率去被收購了吧。 比如全球在機器的投入越來越大,那把硬件做到機制,賣給全球的實驗室,我感覺這也是一個挺大的市場。 有可能機器的研究會帶動很多周邊的一些研究吧,有可能某些東西先出來。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">這一波技術浪潮對於之前成立的這個機器人公司會有什麼樣的衝擊和影響嗎?因為這個賽道好像有10年了。</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">對,主要是之前的機行公司呢,他這個商業化還沒做好,今天我不確定他有沒有足夠的資源真的投入到通用人型的研發。 其實做人型是很容易的,大家都會發一個產品對吧,好像沒有人型,今天感覺就個落伍一樣。 但是在技術上真的做投入的,我覺得是比較少的。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">那如果只是一個行,它一直沒有技術落地的的話,這些公司怎麼辦啊?拿了很多錢啊,今年。</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">我感覺還是會走向特定領域,就是大家有理想也會有現實吧。 就看誰能先定義出來一個好的場景或者一個好的產品。 今天還不太突出。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">對,我覺得你說它的那個目標不明確。</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">目標不明確。它不像扣的那樣那麼簡單。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">對,我設定一個人性機器人到底是幫我幹嘛呢?還是幫我搬箱子,還是幫我洗衣服?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">我感覺現在只有軍用場景或者消防場景,maybe人的生命更貴嘛,那這種有可能還行。 但是軍用和消防,它還是一個特定領域去優化的,更多還是一個設備的角度。 對,它其實對於是不是人行,關注度不用那麼高。 對,甚至說對這裡面的AI的能力要求是不是有那麼高?</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">複盤來看,在矽谷過去一年哪些東西是超出你預期的?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">我感覺超預期的公司層面就兩個,一個是,就是從落後18個月到從模型上追平了,甚至有微弱領先優勢了。 然後還有一個就是AI搜索的,就是我們上次博客聊的。 我這兩家公司還是有些超預期的。 其實其他超預期的我感覺不算太多,我感覺就符合預期,甚至說它的領先優勢沒有進一步放大,我覺得甚至有點低預期。 我感覺最近惡補學習了強化學習之後呢,我就感覺走向的路線更清楚了。 強化學習的提前到來,我感覺是超預期的。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">你最近幾個月聽到最讓你興奮的idea有哪些?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">我感覺最重要呢還是把模型的能力變得更聰明,其實沒有其他的idea,這還是最重要的idea。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">站在今天拿LM再去重新對比一下移動互聯網,它的主線的敘事邏輯是什麼?有哪些明顯的一些愛線?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">對,我覺得移動互聯網跟今天的M做個對比是蠻有意思的。 我們可以畫一個圖啊,就是說主線可能有一條明線,一條暗線。 移動互聯網的明線可能是全球多了四五十億的移動用戶。 一條暗線呢可能就是有了用戶行為數據做推薦。 其實過去十年沒有做推薦的公司都沒做大。 我覺得是蠻有意思的。 那你看移動互聯網還有幾個關鍵的 feature能力,就是大屏幕攝像頭還有GPS。 其實這每個 feature都誕生了非常大的一些公司嘛。 就是大屏幕攝像頭那就跟 TikTok抖音一樣,那GPS就UberD滴這些。 那你看今天的AI的主線暗線關鍵 feature到底是什麼? 我感覺一條明線還是ling law,雖然ling law在發生範式的變化。 其實ling law背後的核心還是 compute嘛。 這個我感覺大家有一定共識。 但這條暗線到底是啥? 就之前咱們那個新時代摩爾定律裡面覺得那個暗線是成本。 但今天我覺得這條暗線有可能是 self play強化學習。 大家有可能會低估了強化學習的重要性。 甚至說有沒有一刻可能性,今天不做強化學習的公司,下一波浪潮裡面都跑不出來。 這就跟推薦一樣。 那今天的RM的關鍵能力呢,我感覺可能如果讓我排序,我感覺是coding,多模態,數學, agent這幾個吧。 甚至說可能還有一些其他的就說個性化、可靠性啊。 我覺得還是跟我們之前提的那個觀點一致,就是說 你觀察這幾個主線暗線也好,或者關鍵能力,它也是漸進式提升的,我覺得應用也是隨著它這個漸進式提升逐漸解鎖的吧。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">你什麼時候意識到RL這麼重要的?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">也就最近兩三個月吧。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">AI領域的最大填的數據是從哪裡來呀?移動互聯最大的數據來源都是新產生的,而不是舊的應用的積累。</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">我感覺可能是做強化學習的過程中,AI產生的數據,加上人指導的數據。 就是一個教練員指導一個運動員,反复訓練的這個過程中產生的數據。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">站在今天,你能重新評價一下中國的這些LLM的公司嗎?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">我感覺大家在模型上做的都差不多,技術辨識度依然還沒有完全拉開。 背後我感覺還是因為做了太少的基礎研究吧。 其實很少有人拜趟前沿的研究。 大多數都是在 follow矽谷的進展,把矽谷的一些技術做產業化落地。 另外一個就是想做AGI的呢,可能不多,大家都想做Klab。 但今天呢可能還沒有看到Klab長什麼樣的影子。 今天可能還主要局限在chat, search,還有 character這幾個產品形態。 我感覺今天還是AGI的故事在撐估值,月亮和六便是吧,就是,但也沒什麼好辦法的,是我的話,我可能也只能這麼做。 我感覺還有一個就是說,去年的時候大家可能都花了比如說三五千萬美金去訓練了一個初代的模型,大家有可能能力上做到了GP3.5的水平。 但我感覺後面可能很少有人再繼續跟進幾億美金投入再訓一個模型了。 甚至說,我感覺得有780%的公司會放棄預訓練,大家直接用開源去做post就可以。 因為大家去做預訓練有可能還不如開源這個水平。 我感覺可能大家是沒有明確看到未來的收益吧,包括你貿然做這個資源投入的風險也太大了。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">年內你預計有幾家能夠達到GPT4的水平,你覺得GPT4的水平還是一個關鍵的門檻嗎?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">我感覺國內會真正意義上達到GT4的。 我感覺至少能有兩三家的,比如說自己,Deepseek,還有節約這種。 還是在認真的做scale up吧。 我感覺GP4還是一個走向下一階段的必要條件。 如果你這個不行,後面還是一個A乘B的成績關係,那你的A不行,我覺得是比較吃虧的。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">但GPT4和RL可能需要同時做。</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">對。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">中國應該加大投入LM嗎?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">我感覺現在投入還是太少了。 你看移動運營商4G和5G的投入應該都是七八千億人民幣的量級吧。 公路高鐵投入也比較大。 對AI方向你再怎麼投入都不為過。 我覺得這個還是挺可怕的,就是就我們想想為什麼會有鴉片戰爭或甲午戰爭,這是不對等的一個東西。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">為什麼我們的技術研究做得不夠啊?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">我感覺很簡單,就是經濟基礎不夠厚。 你失敗了就得出局了。 其實技術研究,我感覺是一個社會在資本富足後的一個奢侈品嘛。 其實你看當時為什麼有貝爾實驗室,是因為AT&T它很賺錢。 包括DeepMind之所以存在,每年都投入那麼大,還是Google它有硬超級業務嘛。 我覺得如果沒有一個強大的經濟基礎,其實沒辦法支持這些科學家去冒險的。 你包括願景和文化也很重要。 比如說AGI就很誘人對吧,就能吸引到最優秀的人,他也不用太擔心這個商業壓力。 我覺得一個非常純粹的研究性的組織,這個文化願景我感覺也是很重要的。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">技術研究一般來說需要什麼樣的文化?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">冒險文化吧。 中國以前就是一個農耕文明嘛。 跟好自己的一畝三分地。 你看我們寫了這些paper,領導讓這個人寫,那個人寫,對吧,量很大,但是突破的機器機息少。 因為歐美他是一個海洋文明嘛。 我感覺是勇於冒險或者探索未知的東西,也有契約或者合作精神。 我覺得研究的氛圍很重要,就是要一堆很強的人在一起碰撞。 今天的牛人都是分散了,每家都有,也沒有集中起來。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">怎麼才能更好的支持技術研究呢?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">我感覺就得讓有經濟基礎的富人和有利潤的公司多投入吧。 甚至鼓勵科學家們的一些造富效應。 因為社會總是由少數人創新和冒險推動呢。 而且這個基礎科學研究的投入虧了對富人沒啥影響,但成功了也得讓這些人賺到大錢。 我覺得千萬不要拿窮人的錢去做科研冒險,虧了錢就會有人拉橫幅啊,讓科學家們的包袱負擔會很大吧。 你在美國創業你容易一美金虧了,可能被大公司收購了,擦了屁股,有可能三年以後再來了。 但在中國你虧一人幣,我感覺創始人連帶好長時間翻不了身啊,我感覺這個同樣虧掉一個億的當然貨幣其實結果還是區別很大的。 所以還是得先致富,再冒險和創新吧。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">最後一部分,我們照例來點評一下矽谷各個主要的player。 第一個毫無疑問是OpenAI了。 在OpenAI的商業上過去一年,你有什麼總結?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">我感覺還是有點浪費了技術領先的紅利吧。 你看G4剛出來的時候,去年初多麼多麼的領先,但是這個領先優勢呢並沒有轉化成很明顯的產品或者商業的飛輪上的一個優勢。 你說今天他可能有40億美金的ARR,年底可能七八十億美金,這個也不差,數字上很成功。 但我感覺按理上應該說更好的。 我覺得背後有一個很大的原因可能就是沒有找到對的人,做出更好的天才的產品。 你比如說咱們提到self play R。 T其實今天可能沒有很強的數據飛輪的。 它不像推薦系統,廣告系統這麼強。 包括你看OpenAI除了T以外,其他的產品好像都不算太成功,發,今年又發了對吧,又發了searchGPT,包括之前的plugin也好,大理也好,GPS也好,好像 都有點感覺產品沒做好,就發了,自己也沒啥好處,反而是啟發了行業吧,就有點給行業做公益的感覺。 T的訂閱這個商業模式吧,今天看我覺得比廣告還是要差的。 廣告這個商業模式還是今天最好的商業模式。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">在Open的組織和人才上,你怎麼看啊?他們感覺今年一直都很動盪,那麼多離職對他們影響大嗎?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">我感覺不會有 fundamental的影響。 首先是最核心的人沒離開。 其次呢,OpenAI也不會說缺了某個人就轉不下去了。 我感覺他們的人才密度極其的高。 反而管理可能不一定壓得住,我感覺人才是過剩的。 但是有一些核心的創始人離開呢,有可能對整個公司的內部信心啊,包括凝聚力啊,可能有一些影響,創始人都走了,甚至還加入了競爭對手公司。 我覺得這個可能會有些信息上的影響吧。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">比如說 Greg Brockman,他是聯合創始人和總裁,他離開影響大嗎?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">我感覺技術上影響應該不大。 也許歷史使命也完成了嘛。 但應該是最歐怕的人吧。 就是感情極其深的一個人,我感覺也不清楚他現在的狀態。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">他是說長期休假是吧?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">對,也許矽谷也有這個文化吧,但是最近在灣區也有好幾個朋友碰到他在跟一些比如說人聊天吧,不知道這是founder還是招聘還是VC。 不確定他會不會說比如說自己創業什麼的,以前是一個比較喜歡領導一的人吧。 但我感覺Open,我不知道算不算完成領導一了吧。 我感覺如果說依然去做AGI,他應該留在OpenI做AGI,或者說maybe離開後去創業,也比較有意思吧。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">另一位聯合創始人Josh Shuman呢,他宣布加入Anthropic。</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">John離開,影響也不大,因為他以前是post train和R的負責人。 按理說R是今天核心的核心嘛。 那其實他平時不太喜歡管理,很多工作去年都已經交給另外一個t,他們現在的核心。 我感覺他就想獨立的做research,做IC吧。 一個比較純粹的research lab可能這種文化可能更好。 但我感覺他可能加入,也許對幫助更大,因為有可能兩個公司的信息就拉齊了。 作為核心的管理層,但是有可能還不一定知道的核心信息。 Open人才足夠的多,而且核心的人並沒走,其實這些人離開可能影響並不大。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">伊列的離開,今天回頭看,可能的原因是哪些啊?大家說他離職跟Qstar有關。</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">我感覺一種概率就是伊利亞可能更早的看到了實現不只吧,叫叫超級智能的一個更快的路徑。 但也許比如說去年的時候跟沒有達成一致,可能更追求商業或者T這些。 那要么就是管理層可能有一些不可調和的矛盾。 其實你看伊利亞的新公司叫SI超級智能。 我感覺他很很自信,似乎看到了實現超級智能的路徑,不然也不會輕易開一家公司,甚至說可能近期都在更積極的招人。 你說伊利亞能拜啥呢?我感覺還是拜強化學習Qstar這些東西。 其實Qstar最早是基於DMan的一個paper吧。 應該是伊利亞最早提出來的,其實剛才我們聊到18年他就在提這些東西。 其實做強化學習是Open很深的一個傳統的。 我感覺如果Qstar真的是伊利亞提出來的, 我感覺他應該很早看到了純語言模型的一個不足了吧。 草莓更像是一個項目的代號吧,呢其實是方法,可能是最早的一個緣起的paper。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">Qpaper?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">最早的一個paper。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">AI解是今天覺得顛覆了任何的劇頭沒有?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">主要是A的顛覆性好像還沒有那麼強,或者說時間沒有到,但我感覺更會重構很多巨頭吧。 其實你看今天的GPU和AI的人才都很貴對吧? 其實有點像你去組織一個戰鬥機飛行編隊,有的飛行員可能就開100個小時,有的人能開1000個小時,有的人能開1萬個小時,這就是所謂的百卡人才,千卡人才,萬卡人才。 其實你沒有開過戰鬥機,經歷過大量的訓練,有可能他就不一定是一個好的飛行員。 那創業公司今天就缺卡嘛。 我覺得還有一個比較大的不同就是說今天的AI只是改變了生產環節,但是分發和消費環節都在成熟的老公司這裡。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">美國紅山的合夥人David Kim,他不是發表了一篇文章是說AI的6000億美元之問嗎?他就說每年需要填補AI的收入缺口增加到了6000億美元,就強調了這個收入增長與基礎設施投入之間的差距,你怎麼回答這個問題啊?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">我覺得挺難回答的。 這個文章標題我感覺也有點標題黨,其實也肯定也沒有花600億那麼多啊,因為大頭還是有一些大公司雲啊,廣告啊用到的多,真的用到模型上的其實我感覺還可能沒到千億美金。 我感覺 revenue和use case肯定是低於預期的,我覺得這個是共識。 但這個也沒辦法,但我感覺只能說看下一代模型,尤其是GPT5或者說草莓這些的進展吧。 我感覺講的這個問題其實是一個歷史規律問題吧。 其實每一次科技變革都是經歷先硬件投入,再infra建設,再應用爆發,歷史上也都是先有鐵路建設,再有後來的經濟活動,先有芯片PCiPhone,再有移動互聯網,先有數據中心,才有企業上雲。 我感覺還有一個有意思的就是說,2010年的時候Amazon當時只有斯科的三分之一的市值,那個時候斯科已經1500億美金了,但現在斯科是2000億美金,Amazon是2萬億美金,10倍了。 所以我感覺硬件投入,Infra建設可能還是需要時間的,應用和收入其實是後半程體現的更好的吧。 我們其實前段時間做了一個AGI的指數,代號叫AGIX,其實就是反映了不同階段的公司變化吧,其實這個指數裡面40%就是硬件公司的權重,就是尤其半導體產業,40%是infra的公司,20%是應用的公司。 我感覺隨著AI建設的發展,其實後面這些的權重比例肯定是要增加了。 你比如說我們看到ServiceNow,其實這些公司在應用上進步還是比較快的吧。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">在2024年Q3AI趨勢還有哪些非共識?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">這個問題也比較有意思。 有可能開源模型和小模型在很多特定高價值的任務上並不work。 比如說我們就拿來看,其實你同一個用戶問同一個問題,用不同的模型,這個答案差異很大。 因為你用這個產品去做探索,其實一個大的模型,一個小的模型,對你的結果用戶體驗影響是很大的。 那其實在很多複雜任務上,那你的問題解答率就比較低,最後你還得又回到GP或者Cloud3.5。 我覺得這是一個過去幾個月觀察的一個很有趣的。 就是發現用開源或者用小的,很多問題解答不了,這個是一個我感覺非共識吧。 第二個我感覺是很多矽谷或者這一波的AI公司,它不是商業公司,我覺得本質上還是一個research lab的一個感覺。 有可能在美國就是個常態,就像貝爾實驗室,AT&T支持一個lab對吧,巨頭以投資的形式給到funding支持發展,這個lab的研究成果呢再給到巨頭做商業化。 其實這樣也挺好的,因為巨頭內部的文化,包括人才不過可能也做不出來。 lab有一個自己的好的文化,而且巨頭投的這些錢還不算虧損,巨額的虧損還不用並表,我感覺有可能還是不錯,有可能會不會這是一個常態? 這些公司就是一個lab的形式。 我覺得有可能也不指望他真的有大規模的商業爆發。 我覺得還有其他很多好玩的,你比如說可解釋性的研究。 我覺得研究是一方面,但如果可解釋性研究真的突破了,其實更重要的是對後面怎麼設計新的模型是有很大幫助的。 就你看今天的模型的參數很大,但真的你每一次query它激活的參數是很小的,你把那些其他的參數砍掉是沒問題的。 這個就很像人的腦科學的研究嘛,人腦也是分區的。 那最後真的研究清楚模型的科技實性基底,我覺得這個是蠻有意思的。 很多人預期多模態,但多模態真的能不能帶來智能,有沒有scaling law,不好說。 code有沒有scaling law不好說,我們相信是有的,包括剛才聊到 數學和代碼能不能泛化到更多領域。 後面的追趕者相比領先者的結局到底是怎麼樣的?歷史上有很多的追趕者,但是結局往往是不太好的。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">雖然說頭部可能遇到一些</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">路線上範式上的變化。</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">但是追趕者真的能追上或者反超嗎?這個不好說。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">追趕者為什麼一般命運都不好?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">因為我國內的模式創新,他們就會覺得一般都是第二名,追趕者成功的好像只有抖音,反超快速。 其他歷史上好像 美團也不是第一個。 對美團做過外賣也不是,這種也有。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">carry.AI之後哪些AI公司還有可能被收購啊?能做個預測?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">ty,比如說Amazon,Meta, Apple。 我感覺好像每個科技巨頭都有一個做搜索的夢想。 像ty這種搜索的意圖數據是極其有價值的,能讓平台公司能更深入的了解用戶的需求,提升廣告或者服務的一些匹配度吧。 另外搜索的整個技術站其實是最前沿的,能反向帶動整個平台的技術站的升級。 其實你看微軟有了B,才能在做這個語音的時候是更有優勢的。 我感覺也是。 並不是說做不下去了。 我感覺他做的其實還蠻好,但是他不一定能進到新的賽場裡面。 所以有可能,我覺得值得一個巨頭去買掉他吧。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">2000年互聯網Bubbles以後,只留下了Amazon。 今天如果AI的hype破滅了,誰會是下一個Amazon?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">這是很好的一個話題。 我感覺硬件公司是值得看的,一個是Apple,一個是Tesla。 AppleiPhone是還值得繼續好好研究的。 雖然Apple的AI能力不是最強的,但大概率未來的K還是長在手機上的。 Apple肯定還是一個叫無形的受益者。 我覺得這個還是一個挺大可能的吧。 我感覺Tesla也是長期值得關注的吧。 真正意義上從一個賣車的公司變成一個真正的AI的公司。 就整個交通行業還是變化更大的吧,而且它也是一個機器人公司。 但今天的自動駕駛,我感覺還是受限於端側算力有限吧。</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">在AI大浪潮變化下,你對一二級市場有沒有一些預測?</p>
+        </div>
+
+        <div class="speech-block speaker-1">
+            <span class="speaker-name">Speaker 1:</span>
+            <p class="speaker-text">今天看AI好像不是顛覆老公司。 我覺得很大程度上一個關鍵詞叫重構enable一批老公司吧。 其實AI提升了生產力,但並沒有改變生產關係。 它只改變了生產環節,但分發和消費環節都在成熟的老公司這裡。 那生產關係和生產環境都在老公司手上呢,那老公司大概率還是受益的。 其實我覺得之前我們那部經常舉的兩個例子,一個是Adobe。 Adobe在當年上雲之前就是一個幾十億美金的傳統軟件公司。 你看轉雲之後商業模式變好了,市場規模變大了,現在是一個兩三千億美金的公司。 包括中國的海康威視對吧,之前就是一個賣攝像頭的公司,一個硬件公司。 經歷了上一波計算機視覺的,它的商業模式變好了,規模也變大了,然後增速也變,Pmultiple都變了。 這一波AI肯定也會有類似的故事。 但這一個大幕吧,我感覺還沒有開始。 AGI的第一幕還是科技巨頭受益了。 第二幕之下我感覺會有更多的可能幾百億美金的公司,因為AI這一波商業模式發生變化了,規模發生變化了,我覺得這個是更期待的吧。 所以我們自己也推了一個二級市場的追踪AI的一個指數,叫AGIX,能更好的追踪這些成熟公司吧,也能更好的理解,希望成為一個AI領域的QQQ吧,或者長期收益能beat QQQ,我覺得這也是一個AI native的產品吧。</p>
+        </div>
+
+        <div class="speech-block speaker-音乐">
+            <span class="speaker-name">音乐:</span>
+            <p class="speaker-text">[音乐播放]</p>
+        </div>
+
+        <div class="speech-block speaker-2">
+            <span class="speaker-name">Speaker 2:</span>
+            <p class="speaker-text">好了,这期节目就是这样。 如果你喜欢我的节目,欢迎前往苹果Podcast、腾讯新闻、小宇宙、喜马拉雅、QQ音乐、订阅张小军商业访谈录。 如果你有其他想邀请的嘉宾,想听的内容,或者你有任何想探讨的话题,都欢迎各位听众朋友们在评论区里留言。 那我们下期再见,拜拜。</p>
+        </div>
+
+        <div class="speech-block speaker-音乐">
+            <span class="speaker-name">音乐:</span>
+            <p class="speaker-text">[音乐播放]</p>
+        </div>
+
+    </div>
+</body>
+</html>
